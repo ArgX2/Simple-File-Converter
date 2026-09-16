@@ -1,4 +1,5 @@
 """Per-user Explorer cascading menu; touches only this application's keys."""
+from i18n import tr
 import ctypes
 import subprocess
 import sys
@@ -72,8 +73,8 @@ def enable():
                 'Icon': '"' + command[0] + '",0'})
             for i, fmt in enumerate(formats_for(ext)):
                 verb = CLASSES + '\\' + group + rf'\shell\{i:02d}_{fmt}'
-                label = fmt.upper() + '로 변환'
-                if ext == 'pdf' and fmt in {'ppt','pptx'}: label += ' (이미지 슬라이드)'
+                label = tr('{v0}로 변환', v0=fmt.upper())
+                if ext == 'pdf' and fmt in {'ppt','pptx'}: label += tr(' (이미지 슬라이드)')
                 put(verb, {'MUIVerb': label, 'MultiSelectModel': 'Single'})
                 # Explorer substitutes %1. Keep it explicitly quoted, even without spaces.
                 cmd = subprocess.list2cmdline(command + ['--context-convert', fmt]) + ' "%1"'

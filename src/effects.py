@@ -1,4 +1,5 @@
 """Small, non-blocking interaction effects for Simple File Converter."""
+from i18n import tr
 from PySide6.QtCore import Qt, QTimer, QPoint, QRectF, QVariantAnimation, QPropertyAnimation, QEasingCurve
 from PySide6.QtGui import QColor, QPainter, QPen
 from PySide6.QtWidgets import QWidget, QPushButton, QLabel, QHBoxLayout, QVBoxLayout, QGraphicsOpacityEffect, QGraphicsDropShadowEffect, QMessageBox
@@ -96,14 +97,14 @@ class Toast(QWidget):
         label.setWordWrap(True)
         label.setStyleSheet(f'font-weight: 700; color: {accent}; font-size: 14px;')
         top.addWidget(label, 1)
-        close = QPushButton('×'); close.setAccessibleName('알림 닫기'); close.setCursor(Qt.PointingHandCursor)
+        close = QPushButton('×'); close.setAccessibleName(tr('알림 닫기')); close.setCursor(Qt.PointingHandCursor)
         close.clicked.connect(self.dismiss)
         top.addWidget(close); box.addLayout(top)
         if message:
             body = QLabel(message); body.setTextFormat(Qt.PlainText); body.setWordWrap(True)
             box.addWidget(body)
         if details:
-            more = QPushButton('상세 보기'); more.setCursor(Qt.PointingHandCursor)
+            more = QPushButton(tr('상세 보기')); more.setCursor(Qt.PointingHandCursor)
             more.clicked.connect(lambda: QMessageBox.information(manager.host, title, details))
             box.addWidget(more, 0, Qt.AlignRight)
         self.adjustSize()
