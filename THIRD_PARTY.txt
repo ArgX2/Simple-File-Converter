@@ -1,0 +1,26 @@
+Simple File Converter
+
+python-pptx — MIT — https://github.com/scanny/python-pptx
+lxml — BSD — https://lxml.de/
+XlsxWriter — BSD — https://github.com/jmcnamara/XlsxWriter
+typing_extensions — PSF — https://github.com/python/typing_extensions
+
+This release includes the following open-source components. License notices
+are included under licenses/ and within the packaged runtime where available.
+
+Python — PSF License — https://www.python.org/
+PySide6 / Qt / shiboken6 — LGPLv3 / GPLv3 / commercial options
+https://www.qt.io/qt-for-python
+https://code.qt.io/cgit/pyside/pyside-setup.git/
+Pillow — MIT-CMU — https://github.com/python-pillow/Pillow
+PyMuPDF / MuPDF — AGPLv3 / commercial options
+https://github.com/pymupdf/PyMuPDF
+https://mupdf.com/
+imageio-ffmpeg — BSD-2-Clause — https://github.com/imageio/imageio-ffmpeg
+FFmpeg 7.1 bundled binary — see binary -L and -buildconf for its exact licenses
+https://ffmpeg.org/ and https://github.com/BtbN/FFmpeg-Builds
+
+The included engine source is provided for modification and rebuilding.
+Redistribution of this application must comply with all applicable component
+licenses, including AGPL/GPL source requirements where applicable. This file
+does not grant proprietary redistribution rights for third-party components.

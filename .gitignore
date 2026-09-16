@@ -1,0 +1,29 @@
+# Python / local environment
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Build products (publish binaries as release assets, not Git history)
+build/
+dist/
+*.exe
+*.dll
+*.pyd
+*.zip
+
+# Local data and credentials
+work/
+outputs/
+.env
+.env.*
+!.env.example
+*.log
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
