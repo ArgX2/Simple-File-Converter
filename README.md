@@ -2,6 +2,18 @@
 
 Windows용 파일 변환 프로그램입니다. 파일을 드래그하거나 선택하고, 원하는 형식으로 변환하세요. 탐색기 우클릭 메뉴에서도 바로 변환할 수 있습니다.
 
+## 다운로드
+
+| 원하는 항목 | 다운로드 | 안내 |
+| --- | --- | --- |
+| **포터블 EXE** | [Windows 실행 파일 받기](https://github.com/ArgX2/Simple-File-Converter/releases) | 릴리스의 **Assets → Simple File Converter.exe** 선택. 설치 없이 실행하세요. |
+| **소스코드 ZIP** | [소스코드 다운로드](https://github.com/ArgX2/Simple-File-Converter/archive/refs/heads/main.zip) | main 브랜치의 최신 소스입니다. 직접 실행하려면 Python이 필요합니다. |
+| **소스코드 살펴보기** | [GitHub에서 보기](https://github.com/ArgX2/Simple-File-Converter/tree/main/src) | 다운로드 없이 코드를 확인하세요. |
+
+> EXE는 릴리스에 첨부된 뒤 다운로드할 수 있습니다. 릴리스가 비어 있다면 아직 실행 파일이 배포되지 않은 상태입니다. 특정 버전의 소스는 해당 릴리스의 **Source code (zip)**을 선택하세요.
+
+EXE를 다운로드한 뒤 실행하고 파일을 드래그하면 됩니다. 지원 환경과 Office 설치가 필요한 변환은 아래를 참고하세요.
+
 ## 주요 기능
 
 - 영상·음성·이미지·PDF 변환
