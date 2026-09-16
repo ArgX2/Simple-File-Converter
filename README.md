@@ -49,7 +49,8 @@ EXE를 다운로드한 뒤 실행하고 파일을 드래그하면 됩니다. 지
 2. 파일별 변환 형식을 선택합니다.
 3. 저장 폴더를 지정하거나 **원본 폴더에 저장**을 체크합니다.
 4. **변환 시작**을 누릅니다.
-<img width="1450" height="1007" alt="image" src="https://github.com/user-attachments/assets/d3d27a8d-eb99-4340-bc8c-171666af4493" />
+<img width="1450" height="1007" alt="스크린샷 2026-09-16 184333" src="https://github.com/user-attachments/assets/5b0fcd4a-2e55-440a-aa7e-3615843dfaf8" />
+
 
 변환 실패 항목은 두 번 클릭하면 상세 내용을 볼 수 있습니다. 알림은 2.5초 후 자동으로 닫힙니다. PPT 관련 확인에서 예를 선택하면 목록을 완전히 비울 때까지 재확인을 생략합니다.
 
@@ -62,7 +63,8 @@ EXE를 다운로드한 뒤 실행하고 파일을 드래그하면 됩니다. 지
 - 현재 사용자 계정의 레지스트리에 메뉴를 등록합니다. 해제하면 이 프로그램의 메뉴만 제거합니다.
 - EXE를 옮기거나 삭제하기 전 메뉴를 해제하세요. 위치를 바꿨다면 새 위치에서 체크를 껐다 켜 다시 등록하세요.
 
-- <img width="814" height="273" alt="스크린샷 2026-09-16 183301" src="https://github.com/user-attachments/assets/8313126e-c592-4388-9438-3d073b620c16" />
+<img width="814" height="273" alt="스크린샷 2026-09-16 183301" src="https://github.com/user-attachments/assets/2f93bf9b-7e86-4e5b-b456-e4f97161345c" />
+
 
 
 ## 소스에서 실행
