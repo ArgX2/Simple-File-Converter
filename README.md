@@ -135,7 +135,7 @@ Simple File Converter.spec  포터블 빌드 설정
 
 ## 예정 기능
 
-Word(`DOC`, `DOCX`)의 PDF 변환과 한글(`HWP`, `HWPX`) 지원을 우선 검토하고 있습니다. 구현 조건과 추가 후보 형식은 [개선 로드맵](docs/ROADMAP.md)에 기록해 두었습니다.
+Word(`DOC`, `DOCX`)와 한글(`HWP`, `HWPX`)의 PDF 변환을 우선 검토하고 있습니다. PDF ↔ HTML·PNG·Markdown, 이미지 묶음 ↔ 다중 페이지 PDF 등 양방향 후보와 구현 조건은 [개선 로드맵](docs/ROADMAP.md)에 기록해 두었습니다.
 
 ## 라이선스 상태
 
