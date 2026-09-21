@@ -2,7 +2,7 @@
 
 [한국어](README.md) | [English](README.en.md) | [日本語](README.ja.md) | **简体中文** | [Español](README.es.md)
 
-适用于 Windows 的文件转换工具。拖入或选择文件，指定输出格式，即可转换。也可以通过文件资源管理器的右键菜单直接转换。
+适用于 Windows 的文件转换工具。当前版本为 `v1.0.0`。拖入或选择文件，指定输出格式，即可转换。也可以通过文件资源管理器的右键菜单转换单个文件。请查看[更新记录](CHANGELOG.md)。
 
 ## 下载
 
@@ -49,12 +49,26 @@
 | MP4, AVI, MKV, MOV, WEBM, WMV, M4V, MPG, MPEG | MP4, AVI, MKV, MOV, WEBM, GIF, PNG, JPG，以及音频提取 |
 | MP3, WAV, FLAC, AAC, M4A, OGG, OPUS, WMA | MP3, WAV, FLAC, M4A, OGG, AAC, OPUS |
 | PNG, JPG, JPEG, GIF, WEBP, BMP, TIF, TIFF, ICO | PNG, JPG, WEBP, BMP, TIFF, GIF, PDF |
-| PDF | TXT, PNG, JPG, WEBP, TIFF, PPTX, PPT |
+| PDF | PNG, JPG, WEBP, TIFF, PPTX, PPT |
 | PPT, PPTX | PDF |
 
 实际能否转换取决于文件内容和已安装的软件。动态 GIF 转 MP4/WEBM 可在程序窗口中选择。
 
-PDF → TXT 会按页面顺序提取文本并保存为 UTF-8 TXT 文件。扫描 PDF 以及文字、表格和图片的原始位置不会被恢复。
+无法完整保留原始内容的转换会在程序中显示为 `不完整转换为 XXX`。
+
+### 转换可用性
+
+`O` 表示普通转换，`△` 表示内容、质量或结构可能变化的不完整转换，`X` 表示不支持。
+
+| 输入 \\ 输出 | 图片 | 视频 | 音频 | PDF | PPTX | PPT |
+| --- | --- | --- | --- | --- | --- | --- |
+| PNG/JPG/GIF 等图片 | O/△ | △ | X | O | X | X |
+| MP4/AVI 等视频 | △ | △ | △ | X | X | X |
+| MP3/WAV 等音频 | X | X | △ | X | X | X |
+| PDF | △ | X | X | X | △ | △ |
+| PPT/PPTX | X | X | X | △ | X | X |
+
+上方的支持格式表列出了可选择的具体输出格式；实际结果还取决于文件内容和已安装的 Office 软件。
 
 ## 使用方法
 

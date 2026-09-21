@@ -2,7 +2,7 @@
 
 [한국어](README.md) | [English](README.en.md) | **日本語** | [简体中文](README.zh-CN.md) | [Español](README.es.md)
 
-Windows用のファイル変換ソフトです。ファイルをドラッグするか選択し、出力形式を指定して変換できます。エクスプローラーの右クリックメニューからも変換できます。
+Windows用のファイル変換ソフトです。現在のバージョンは `v1.0.0` です。ファイルをドラッグするか選択し、出力形式を指定して変換できます。エクスプローラーの右クリックメニューから単一ファイルを変換できます。[変更履歴](CHANGELOG.md)
 
 ## ダウンロード
 
@@ -49,12 +49,26 @@ EXEをダウンロードして起動し、ファイルをドラッグしてく�
 | MP4, AVI, MKV, MOV, WEBM, WMV, M4V, MPG, MPEG | MP4, AVI, MKV, MOV, WEBM, GIF, PNG, JPG、および音声抽出 |
 | MP3, WAV, FLAC, AAC, M4A, OGG, OPUS, WMA | MP3, WAV, FLAC, M4A, OGG, AAC, OPUS |
 | PNG, JPG, JPEG, GIF, WEBP, BMP, TIF, TIFF, ICO | PNG, JPG, WEBP, BMP, TIFF, GIF, PDF |
-| PDF | TXT, PNG, JPG, WEBP, TIFF, PPTX, PPT |
+| PDF | PNG, JPG, WEBP, TIFF, PPTX, PPT |
 | PPT, PPTX | PDF |
 
 実際に変換できるかどうかは、ファイルの内容やインストール済みソフトに依存します。アニメーションGIFからMP4/WEBMへの変換は、アプリ画面で選択できます。
 
-PDF → TXTでは、ページ順にテキストを抽出してUTF-8のTXTファイルに保存します。スキャンPDFや、文字・表・画像の元の配置は復元されません。
+完全な保持が難しい変換は、アプリで `XXXに不完全変換` と表示します。
+
+### 変換可否
+
+`O` は通常変換、`△` は内容・品質・構造が変わる可能性がある不完全変換、`X` は非対応です。
+
+| 入力 \\ 出力 | 画像 | 動画 | 音声 | PDF | PPTX | PPT |
+| --- | --- | --- | --- | --- | --- | --- |
+| PNG/JPG/GIFなど画像 | O/△ | △ | X | O | X | X |
+| MP4/AVIなど動画 | △ | △ | △ | X | X | X |
+| MP3/WAVなど音声 | X | X | △ | X | X | X |
+| PDF | △ | X | X | X | △ | △ |
+| PPT/PPTX | X | X | X | △ | X | X |
+
+詳細な出力形式は上の対応形式表を参照してください。ファイル内容やOfficeソフトの有無により変換可否は変わります。
 
 ## 使い方
 

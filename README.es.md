@@ -2,7 +2,7 @@
 
 [한국어](README.md) | [English](README.en.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | **Español**
 
-Conversor de archivos para Windows. Arrastra o selecciona archivos, elige el formato de salida y conviértelos. También puedes convertir desde el menú contextual del Explorador de archivos.
+Conversor de archivos para Windows. Versión actual: `v1.0.0`. Arrastra o selecciona archivos, elige el formato de salida y conviértelos. También puedes convertir un solo archivo desde el menú contextual del Explorador. Consulta el [historial de cambios](CHANGELOG.md).
 
 ## Descargas
 
@@ -49,12 +49,26 @@ Las traducciones están incluidas en el EXE y funcionan sin conexión. La prefer
 | MP4, AVI, MKV, MOV, WEBM, WMV, M4V, MPG, MPEG | MP4, AVI, MKV, MOV, WEBM, GIF, PNG, JPG y extracción de audio |
 | MP3, WAV, FLAC, AAC, M4A, OGG, OPUS, WMA | MP3, WAV, FLAC, M4A, OGG, AAC, OPUS |
 | PNG, JPG, JPEG, GIF, WEBP, BMP, TIF, TIFF, ICO | PNG, JPG, WEBP, BMP, TIFF, GIF, PDF |
-| PDF | TXT, PNG, JPG, WEBP, TIFF, PPTX, PPT |
+| PDF | PNG, JPG, WEBP, TIFF, PPTX, PPT |
 | PPT, PPTX | PDF |
 
 La disponibilidad de cada conversión depende del contenido del archivo y del software instalado. La conversión de GIF animado a MP4/WEBM se puede seleccionar en la ventana del programa.
 
-PDF → TXT extrae el texto en orden de página y lo guarda en un archivo TXT UTF-8. Los PDF escaneados y la posición original de texto, tablas e imágenes no se restauran.
+Las conversiones que no pueden conservar completamente el original se muestran como `Convertir a XXX de forma incompleta`.
+
+### Estado de las conversiones
+
+`O` significa conversión normal, `△` significa conversión incompleta en la que pueden cambiar el contenido, la calidad o la estructura, y `X` significa que no es compatible.
+
+| Entrada \\ Salida | Imágenes | Vídeo | Audio | PDF | PPTX | PPT |
+| --- | --- | --- | --- | --- | --- | --- |
+| PNG/JPG/GIF y otras imágenes | O/△ | △ | X | O | X | X |
+| MP4/AVI y otros vídeos | △ | △ | △ | X | X | X |
+| MP3/WAV y otros audios | X | X | △ | X | X | X |
+| PDF | △ | X | X | X | △ | △ |
+| PPT/PPTX | X | X | X | △ | X | X |
+
+Los formatos de salida concretos aparecen en la tabla de formatos compatibles y pueden variar según el contenido y el software de Office instalado.
 
 ## Uso
 

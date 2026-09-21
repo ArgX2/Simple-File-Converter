@@ -2,7 +2,7 @@
 
 [한국어](README.md) | **English** | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [Español](README.es.md)
 
-A file converter for Windows. Drop or select files, choose an output format, and convert. You can also convert directly from the File Explorer context menu.
+A file converter for Windows. Current version: `v1.0.0`. Drop or select files, choose an output format, and convert. You can also convert a single file from the File Explorer context menu. See the [changelog](CHANGELOG.md).
 
 ## Download
 
@@ -49,12 +49,26 @@ Translations are bundled in the EXE and work offline. Preferences are saved for 
 | MP4, AVI, MKV, MOV, WEBM, WMV, M4V, MPG, MPEG | MP4, AVI, MKV, MOV, WEBM, GIF, PNG, JPG, and audio extraction |
 | MP3, WAV, FLAC, AAC, M4A, OGG, OPUS, WMA | MP3, WAV, FLAC, M4A, OGG, AAC, OPUS |
 | PNG, JPG, JPEG, GIF, WEBP, BMP, TIF, TIFF, ICO | PNG, JPG, WEBP, BMP, TIFF, GIF, PDF |
-| PDF | TXT, PNG, JPG, WEBP, TIFF, PPTX, PPT |
+| PDF | PNG, JPG, WEBP, TIFF, PPTX, PPT |
 | PPT, PPTX | PDF |
 
 Conversion availability depends on the file contents and installed software. Animated GIF → MP4/WEBM is available in the application window.
 
-PDF → TXT extracts text in page order into a UTF-8 TXT file. Scanned PDFs and the original placement of text, tables, and images are not restored.
+Formats that may not preserve the original perfectly are labeled `Convert to XXX with possible loss` in the application.
+
+### Conversion status
+
+`O` means a standard conversion, `△` means an incomplete conversion where content, quality, or structure may change, and `X` means unsupported.
+
+| Input \\ Output | Images | Video | Audio | PDF | PPTX | PPT |
+| --- | --- | --- | --- | --- | --- | --- |
+| PNG/JPG/GIF and other images | O/△ | △ | X | O | X | X |
+| MP4/AVI and other video | △ | △ | △ | X | X | X |
+| MP3/WAV and other audio | X | X | △ | X | X | X |
+| PDF | △ | X | X | X | △ | △ |
+| PPT/PPTX | X | X | X | △ | X | X |
+
+The detailed selectable outputs are listed in the supported formats table above and may vary with file contents and installed Office software.
 
 ## Usage
 
