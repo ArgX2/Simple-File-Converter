@@ -25,12 +25,11 @@ Python 3.12와 Windows x64를 기준으로 합니다. 프로젝트 작업 기준
 
 ```powershell
 python src\app.py --context-convert jpg "C:\Example\image.png"
-python src\app.py --context-convert pdf "C:\Example\one.pptx" "C:\Example\two.pptx"
 python src\app.py --self-test "build\diagnostics"
 python src\app.py --smoke-test
 ```
 
-`--context-convert`는 UI 알림을 표시하며 원본 폴더에 저장합니다. 여러 경로를 받으면 같은 출력 형식으로 순서대로 처리합니다. 완료 알림과 오류 알림이 닫힌 뒤 종료합니다. 실패 여부를 프로세스 종료 코드만으로 판단하는 배치 API는 아닙니다.
+`--context-convert`는 단일 파일을 받아 UI 알림을 표시하며 원본 폴더에 저장합니다. 완료 알림과 오류 알림이 닫힌 뒤 종료합니다.
 
 ## 검증 범위
 

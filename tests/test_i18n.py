@@ -73,18 +73,6 @@ class LanguageTests(unittest.TestCase):
         self.assertEqual(window.title.text(), i18n.tr('변환을 완료했습니다'))
         self.assertEqual(window.timer.interval(), 2500)
 
-    def test_quick_conversion_accepts_multiple_files_and_keeps_source_folders(self):
-        first = self.root / 'one'; second = self.root / 'two'
-        first.mkdir(); second.mkdir()
-        paths = [first / 'one.png', second / 'two.png']
-        for path in paths: Image.new('RGB', (20, 30), 'blue').save(path)
-        worker = Worker([(i, path, 'jpg', None) for i, path in enumerate(paths)], None)
-        results = []
-        worker.result.connect(lambda row, state, result: results.append((row, state, result)))
-        worker.run()
-        self.assertEqual([state for _, state, _ in sorted(results)], ['완료', '완료'])
-        self.assertEqual({Path(result).parent for _, _, result in results}, {first, second})
-
     def test_saved_choice_and_system_default(self):
         with patch('i18n.QLocale') as locale:
             locale.system.return_value.uiLanguages.return_value = ['ja-JP']
@@ -106,14 +94,14 @@ class LanguageTests(unittest.TestCase):
             window = Window()
         self.addCleanup(window.close)
         window.add_files([str(source)])
-        window.table.cellWidget(0, 2).setCurrentText('PDF')
+        window.table.cellWidget(0, 2).setCurrentIndex(window.table.cellWidget(0, 2).findData('pdf'))
         window.entries[0].update(state='완료', result=str(self.root / 'result.pdf'))
         window.table.item(0, 3).setText(i18n.tr('완료'))
         for code in i18n.LANGUAGES:
             window.language_picker.setCurrentIndex(window.language_picker.findData(code))
             self.assertEqual(window.pick.text(), i18n.tr('＋ 파일 선택'))
             self.assertEqual(window.table.item(0, 0).text(), source.name)
-            self.assertEqual(window.table.cellWidget(0, 2).currentText(), 'PDF')
+            self.assertEqual(window.table.cellWidget(0, 2).currentData(), 'pdf')
             self.assertEqual(window.entries[0]['state'], '완료')
             self.assertTrue(window.table.item(0, 3).text().startswith(i18n.tr('완료')))
             self.assertEqual(APP.layoutDirection(), Qt.RightToLeft if code in {'ar', 'he'} else Qt.LeftToRight)

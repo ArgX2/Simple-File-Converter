@@ -1,5 +1,6 @@
 from i18n import tr
 from i18n import LANGUAGES, initialize, selection, set_language, retranslate
+from version import VERSION
 import os
 import sys
 import threading
@@ -7,7 +8,7 @@ from pathlib import Path
 from PySide6.QtCore import Qt, Signal, QThread, QUrl, QTimer, QEvent, QPropertyAnimation, QEasingCurve
 from PySide6.QtGui import QDesktopServices, QIcon, QColor
 from PySide6.QtWidgets import QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, QLabel, QPushButton, QTableWidget, QTableWidgetItem, QComboBox, QFileDialog, QLineEdit, QProgressBar, QMessageBox, QHeaderView, QAbstractItemView, QCheckBox
-from engine import inspect, convert, Cancelled, IMAGES, MEDIA
+from engine import inspect, convert, Cancelled, IMAGES, MEDIA, imperfect_for_extension
 from effects import AnimatedButton, DragGlow, ToastManager
 QPushButton = AnimatedButton
 
@@ -139,6 +140,9 @@ class Window(QMainWindow):
         self.language_picker.currentIndexChanged.connect(self.change_language)
         footer.addWidget(self.language_picker)
         footer.addStretch()
+        self.version = QLabel(f'v{VERSION}')
+        self.version.setObjectName('version')
+        footer.addWidget(self.version)
         footer.addWidget(self.context_menu)
         layout.addLayout(footer)
         self.toasts = ToastManager(root)
@@ -175,6 +179,11 @@ class Window(QMainWindow):
         for row, entry in enumerate(self.entries):
             self.table.item(row, 1).setText(tr(entry['meta']['detail']))
             self.table.item(row, 3).setText(tr(entry['state']) + (tr(' · 두 번 클릭') if entry['result'] else ''))
+            combo = self.table.cellWidget(row, 2)
+            for index in range(combo.count()):
+                fmt = combo.itemData(index)
+                label = tr('{v0}로 불완전 변환', v0=fmt.upper()) if imperfect_for_extension(entry['path'].suffix, fmt) else tr('{v0}로 변환', v0=fmt.upper())
+                combo.setItemText(index, label)
         if self.entries and all(entry['state'] != '대기' for entry in self.entries):
             self.status.setText(' · '.join(tr('{v0} {v1}개', v0=tr(state), v1=sum(e['state'] == state for e in self.entries)) for state in ['완료', '실패', '취소됨']))
         else:
@@ -288,7 +297,8 @@ class Window(QMainWindow):
             self.table.setItem(row, 1, QTableWidgetItem(meta['detail']))
             combo = QComboBox()
             for fmt in meta['formats']:
-                combo.addItem(fmt.upper(), fmt)
+                label = tr('{v0}로 불완전 변환', v0=fmt.upper()) if imperfect_for_extension(path.suffix, fmt) else tr('{v0}로 변환', v0=fmt.upper())
+                combo.addItem(label, fmt)
             ext = path.suffix.lower()[1:]
             if combo.currentData() == ext and combo.count() > 1: combo.setCurrentIndex(1)
             self.table.setCellWidget(row, 2, combo)
@@ -438,6 +448,7 @@ QLabel#title { font-size: 30px; font-weight: 700; }
 QLabel#drop { background: #edf2ff; border: 2px dashed #9cafe9; border-radius: 14px; color: #425c9e; font-size: 16px; }
 QLabel#drop[dragActive="true"] { background: #dce8ff; border: 2px solid #416ef0; color: #2349b0; font-weight: 700; }
 QLabel#note { color: #67748d; font-size: 12px; }
+QLabel#version { color: #8a94a8; font-size: 10px; }
 QPushButton { background: white; border: 1px solid #d7deeb; border-radius: 8px; padding: 10px 16px; }
 QPushButton:hover { background: #e8eeff; border-color: #9aace0; }
 QPushButton#primary { background: #365fd5; color: white; border: none; font-weight: 700; padding: 12px 25px; }
@@ -462,7 +473,7 @@ if __name__ == '__main__':
     if '--context-convert' in sys.argv:
         from quick_convert import QuickConvert
         index = sys.argv.index('--context-convert')
-        if len(sys.argv) < index + 3:
+        if len(sys.argv) != index + 3:
             QMessageBox.warning(None, 'Simple File Converter', tr('변환할 파일과 형식을 확인해 주세요.'))
             sys.exit(1)
         paths = [Path(value).resolve() for value in sys.argv[index + 2:]]

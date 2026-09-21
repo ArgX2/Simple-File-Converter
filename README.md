@@ -2,7 +2,7 @@
 
 **한국어** | [English](README.en.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [Español](README.es.md)
 
-Windows용 파일 변환 프로그램입니다. 파일을 드래그하거나 선택하고, 원하는 형식으로 변환하세요. 탐색기 우클릭 메뉴에서도 바로 변환할 수 있습니다.
+Windows용 파일 변환 프로그램입니다. 현재 버전은 `v1.0.0`입니다. 파일을 드래그하거나 선택하고, 원하는 형식으로 변환하세요. 탐색기 우클릭 메뉴에서도 단일 파일을 바로 변환할 수 있습니다.
 
 ## 다운로드
 
@@ -40,7 +40,7 @@ EXE를 다운로드한 뒤 실행하고 파일을 드래그하면 됩니다. 지
 - Windows 10/11, 64비트
 - 소스 실행·빌드: Python 3.12, 64비트
 - PPT/PPTX → PDF 및 PDF → PPT: **PowerPoint 또는 LibreOffice 설치 필요**
-- PDF → PPTX: Office 설치 불필요. 각 페이지를 **이미지 슬라이드**로 저장하며 텍스트/도형을 개별 편집하는 형태로 복원하지 않습니다.
+- PDF → PPTX: Office 설치 불필요. 각 페이지를 **이미지 슬라이드**로 저장합니다.
 
 ## 변환 형식
 
@@ -49,12 +49,12 @@ EXE를 다운로드한 뒤 실행하고 파일을 드래그하면 됩니다. 지
 | MP4, AVI, MKV, MOV, WEBM, WMV, M4V, MPG, MPEG | MP4, AVI, MKV, MOV, WEBM, GIF, PNG, JPG 및 음성 추출 |
 | MP3, WAV, FLAC, AAC, M4A, OGG, OPUS, WMA | MP3, WAV, FLAC, M4A, OGG, AAC, OPUS |
 | PNG, JPG, JPEG, GIF, WEBP, BMP, TIF, TIFF, ICO | PNG, JPG, WEBP, BMP, TIFF, GIF, PDF |
-| PDF | TXT, PNG, JPG, WEBP, TIFF, PPTX, PPT |
+| PDF | PNG, JPG, WEBP, TIFF, PPTX, PPT |
 | PPT, PPTX | PDF |
 
 실제 변환 가능 여부는 파일 내용과 설치된 프로그램에 따라 달라집니다. 움직이는 GIF의 MP4/WEBM 변환은 프로그램 창에서 선택할 수 있습니다.
 
-PDF를 TXT로 변환하면 페이지 순서대로 텍스트를 추출해 UTF-8 TXT 파일로 저장합니다. 스캔 PDF나 텍스트 위치·표·이미지는 그대로 복원되지 않습니다.
+완전한 보존이 어려운 항목은 프로그램에서 `XXX로 불완전 변환` 형식으로 표시합니다. 실제 변환 실패와 구분되는 품질 안내입니다.
 
 ## 사용 방법
 
@@ -139,7 +139,7 @@ Simple File Converter.spec  포터블 빌드 설정
 
 Word(`DOC`, `DOCX`)와 한글(`HWP`, `HWPX`)의 PDF 변환을 우선 검토하고 있습니다. PDF ↔ HTML·PNG·Markdown, 이미지 묶음 ↔ 다중 페이지 PDF 등 양방향 후보와 구현 조건은 [개선 로드맵](docs/ROADMAP.md)에 기록해 두었습니다.
 
-원본의 편집 구조나 배치를 완전히 보장하기 어려운 변환에는 **`DOCX로 변환 (손상될 수 있음)`**처럼 짧은 품질 고지를 형식 이름에 함께 표시할 예정입니다.
+원본의 편집 구조나 배치를 완전히 보장하기 어려운 변환에는 **`XXX로 불완전 변환`**처럼 표시합니다. 이 표기는 현재 16개 UI 언어로 함께 제공됩니다.
 
 ## 라이선스 상태
 

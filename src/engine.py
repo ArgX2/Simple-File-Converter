@@ -32,7 +32,7 @@ def inspect(path):
                 raise ValueError(tr('암호가 걸린 PDF입니다. 암호를 해제한 파일을 선택해 주세요.'))
             if not len(doc):
                 raise ValueError(tr('페이지가 없는 PDF입니다.'))
-            return {'kind': 'pdf', 'formats': ['png', 'jpg', 'webp', 'tiff', 'txt', 'pptx', 'ppt'], 'detail': tr('PDF · {v0}페이지', v0=len(doc))}
+            return {'kind': 'pdf', 'formats': ['png', 'jpg', 'webp', 'tiff', 'pptx', 'ppt'], 'detail': tr('PDF · {v0}페이지', v0=len(doc))}
     if ext in IMAGES:
         with Image.open(path) as im:
             im.load()
@@ -117,16 +117,6 @@ def convert(src, fmt, folder, meta=None, cancel=None, progress=lambda text: None
             pdf_to_slides(src, dst, cancel, progress)
         elif meta['kind'] == 'media' or fmt in VIDEO:
             media_convert(src, dst, fmt, cancel)
-        elif meta['kind'] == 'pdf' and fmt == 'txt':
-            with pymupdf.open(src) as doc, dst.open('w', encoding='utf-8', newline='') as text_file:
-                for i, page in enumerate(doc):
-                    check(cancel)
-                    progress(tr('PDF {v0}/{v1}페이지', v0=i + 1, v1=len(doc)))
-                    text = page.get_text('text')
-                    if i:
-                        text_file.write('\n\n')
-                    text_file.write(text.rstrip())
-                    text_file.write('\n')
         elif meta['kind'] == 'pdf':
             dst = stage / (src.stem + '_' + fmt + '_pages')
             dst.mkdir()
@@ -174,3 +164,17 @@ def convert(src, fmt, folder, meta=None, cancel=None, progress=lambda text: None
             except FileExistsError:
                 target = folder / (f'{dst.stem} ({n}){dst.suffix}' if dst.is_file() else f'{dst.name} ({n})')
                 n += 1
+
+def imperfect_for_extension(extension, fmt):
+    """Return whether a conversion can lose structure, fidelity, or tracks."""
+    extension = extension.lower().lstrip('.')
+    fmt = fmt.lower().lstrip('.')
+    if extension in {'ppt', 'pptx'} and fmt == 'pdf':
+        return True
+    if extension == 'pdf' and fmt in {'ppt', 'pptx'}:
+        return True
+    if extension in MEDIA:
+        return True
+    if extension in IMAGES and fmt in {'jpg', 'gif', 'mp4', 'webm'}:
+        return True
+    return False

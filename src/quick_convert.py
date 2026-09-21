@@ -16,6 +16,8 @@ class QuickConvert(QWidget):
         self.state, self.result = '', ''
         self.results = {}
         self.paths = [Path(path) for path in paths]
+        if len(self.paths) != 1:
+            raise ValueError('Explorer conversion accepts one file at a time.')
         jobs = [(row, path, fmt, None) for row, path in enumerate(self.paths)]
         self.worker = worker_type(jobs, None)
         layout = QVBoxLayout(self)
@@ -23,9 +25,7 @@ class QuickConvert(QWidget):
         self.title = QLabel(tr('파일을 변환하고 있습니다'))
         self.title.setStyleSheet('font-size: 16px; font-weight: 700; color: #3264d9;')
         layout.addWidget(self.title)
-        self.message = QLabel(f'{tr("{v0}개 파일", v0=len(self.paths))} → {fmt.upper()}')
-        if len(self.paths) == 1:
-            self.message.setText(f'{self.paths[0].name} → {fmt.upper()}')
+        self.message = QLabel(f'{self.paths[0].name} → {fmt.upper()}')
         self.message.setTextFormat(Qt.PlainText); self.message.setWordWrap(True)
         layout.addWidget(self.message)
         self.progress = QProgressBar(); self.progress.setRange(0, 0)

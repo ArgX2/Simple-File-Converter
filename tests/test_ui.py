@@ -75,6 +75,10 @@ class UITests(unittest.TestCase):
             enable.assert_called_once()
             disable.assert_called_once()
 
+    def test_version_is_small_footer_label(self):
+        self.assertEqual(self.window.version.text(), 'v1.0.0')
+        self.assertEqual(self.window.version.objectName(), 'version')
+
     def test_toast_expires_even_when_hovered(self):
         self.window.show()
         for kind in ['info', 'success', 'error']:
