@@ -39,6 +39,12 @@ class ShellMenuTests(unittest.TestCase):
         self.assertIn(unrelated, self.registry.data)
         self.assertFalse(any('SimpleFileConverter' in path for path in self.registry.data))
 
+    def test_pdf_and_docx_have_document_commands(self):
+        self.assertIn('docx', shell_menu.formats_for('pdf'))
+        self.assertEqual(shell_menu.formats_for('docx'), ['pdf'])
+        self.assertTrue(shell_menu.imperfect_for_extension('pdf', 'docx'))
+        self.assertTrue(shell_menu.imperfect_for_extension('docx', 'pdf'))
+
     def test_registration_failure_rolls_back(self):
         original = shell_menu.put
         count = 0

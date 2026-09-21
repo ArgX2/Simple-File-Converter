@@ -23,6 +23,11 @@ class Cancelled(Exception):
 def inspect(path):
     path = Path(path)
     ext = path.suffix.lower()[1:]
+    if ext == 'docx':
+        if not path.is_file() or path.stat().st_size == 0: raise ValueError(tr('파일이 비어 있거나 찾을 수 없습니다. 원본을 확인해 주세요.'))
+        from document import validate_docx
+        validate_docx(path)
+        return {'kind': 'document', 'formats': ['pdf'], 'detail': 'DOCX'}
     if ext in {'ppt', 'pptx'}:
         if not path.is_file() or path.stat().st_size == 0: raise ValueError(tr('파일이 비어 있거나 찾을 수 없습니다. 원본을 확인해 주세요.'))
         return {'kind': 'presentation', 'formats': ['pdf'], 'detail': ext.upper()}
@@ -32,7 +37,7 @@ def inspect(path):
                 raise ValueError(tr('암호가 걸린 PDF입니다. 암호를 해제한 파일을 선택해 주세요.'))
             if not len(doc):
                 raise ValueError(tr('페이지가 없는 PDF입니다.'))
-            return {'kind': 'pdf', 'formats': ['png', 'jpg', 'webp', 'tiff', 'pptx', 'ppt'], 'detail': tr('PDF · {v0}페이지', v0=len(doc))}
+            return {'kind': 'pdf', 'formats': ['png', 'jpg', 'webp', 'tiff', 'pptx', 'ppt', 'docx'], 'detail': tr('PDF · {v0}페이지', v0=len(doc))}
     if ext in IMAGES:
         with Image.open(path) as im:
             im.load()
@@ -107,11 +112,17 @@ def convert(src, fmt, folder, meta=None, cancel=None, progress=lambda text: None
     with tempfile.TemporaryDirectory(prefix='.converter-', dir=folder) as temp:
         stage = Path(temp)
         dst = stage / (src.stem + '.' + fmt)
-        if meta['kind'] == 'presentation':
+        if meta['kind'] == 'document':
+            from document import docx_to_pdf
+            docx_to_pdf(src, dst, cancel, progress)
+        elif meta['kind'] == 'presentation':
             from office import office_convert
             office_convert(src, dst, cancel)
             with pymupdf.open(dst) as doc:
                 if not len(doc): raise ValueError(tr('PDF 결과에 페이지가 없습니다. 원본 파일을 확인해 주세요.'))
+        elif meta['kind'] == 'pdf' and fmt == 'docx':
+            from document import pdf_to_docx
+            pdf_to_docx(src, dst, cancel, progress)
         elif meta['kind'] == 'pdf' and fmt in {'ppt', 'pptx'}:
             from office import pdf_to_slides
             pdf_to_slides(src, dst, cancel, progress)
@@ -171,7 +182,9 @@ def imperfect_for_extension(extension, fmt):
     fmt = fmt.lower().lstrip('.')
     if extension in {'ppt', 'pptx'} and fmt == 'pdf':
         return True
-    if extension == 'pdf' and fmt in {'ppt', 'pptx'}:
+    if extension == 'pdf' and fmt in {'ppt', 'pptx', 'docx'}:
+        return True
+    if extension == 'docx' and fmt == 'pdf':
         return True
     if extension in MEDIA:
         return True

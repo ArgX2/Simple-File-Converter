@@ -5,6 +5,8 @@ from pathlib import Path
 from PySide6.QtCore import Qt, QTimer, QUrl
 from PySide6.QtGui import QIcon, QDesktopServices
 from PySide6.QtWidgets import QWidget, QVBoxLayout, QHBoxLayout, QLabel, QProgressBar, QPushButton, QMessageBox, QApplication
+from engine import imperfect_for_extension
+from document import quality_note
 
 class QuickConvert(QWidget):
     def __init__(self, paths, fmt, worker_type):
@@ -25,9 +27,16 @@ class QuickConvert(QWidget):
         self.title = QLabel(tr('파일을 변환하고 있습니다'))
         self.title.setStyleSheet('font-size: 16px; font-weight: 700; color: #3264d9;')
         layout.addWidget(self.title)
-        self.message = QLabel(f'{self.paths[0].name} → {fmt.upper()}')
+        label = tr('{v0}로 불완전 변환', v0=fmt.upper()) if imperfect_for_extension(self.paths[0].suffix, fmt) else tr('{v0}로 변환', v0=fmt.upper())
+        self.message = QLabel(f'{self.paths[0].name} → {label}')
         self.message.setTextFormat(Qt.PlainText); self.message.setWordWrap(True)
         layout.addWidget(self.message)
+        note = quality_note(self.paths[0].suffix, fmt)
+        self.quality = QLabel(note)
+        self.quality.setTextFormat(Qt.PlainText)
+        self.quality.setWordWrap(True)
+        self.quality.setVisible(bool(note))
+        layout.addWidget(self.quality)
         self.progress = QProgressBar(); self.progress.setRange(0, 0)
         layout.addWidget(self.progress)
         row = QHBoxLayout(); row.addStretch()

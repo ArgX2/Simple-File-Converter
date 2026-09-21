@@ -1,5 +1,5 @@
 Simple File Converter
-Windows 10/11 64비트용 · 버전 v1.0.0
+Windows 10/11 64비트용 · 버전 v1.1.0
 
 실행 방법
 Simple File Converter.exe를 실행하세요. Python이나 별도의 변환 프로그램 설치는 필요 없습니다.
@@ -55,7 +55,9 @@ Windows 세션/Office 앱 인증 오류는 브라우저 로그인만으로 해�
 이미지 입력: PNG, JPG, JPEG, GIF, WEBP, BMP, TIF, TIFF, ICO
 이미지 출력: PNG, JPG, WEBP, BMP, TIFF, GIF, PDF
 움직이는 GIF는 MP4, WEBM으로도 변환할 수 있습니다.
-PDF 입력: PNG, JPG, WEBP, TIFF, PPTX, PPT로 변환합니다.
+PDF 입력: PNG, JPG, WEBP, TIFF, PPTX, PPT, DOCX로 변환합니다.
+DOCX 입력: PDF로 변환합니다. Microsoft Word 또는 LibreOffice가 필요합니다.
+PDF → DOCX는 텍스트와 페이지 이미지를 복원하며, 스캔 문서 OCR은 지원하지 않습니다.
 
 변환 방식
 - 파일을 인터넷에 업로드하지 않고 PC에서 처리합니다.

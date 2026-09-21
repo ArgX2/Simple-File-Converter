@@ -3,11 +3,12 @@ import hashlib
 import tempfile
 import threading
 import unittest
+from docx_fixture import make_docx
 from pathlib import Path
 from PIL import Image
 import pymupdf
 from pptx import Presentation
-from engine import convert, inspect, Cancelled
+from engine import convert, inspect, Cancelled, imperfect_for_extension
 
 
 class EngineTests(unittest.TestCase):
@@ -63,6 +64,21 @@ class EngineTests(unittest.TestCase):
         corrupt.write_bytes(b'not an image')
         with self.assertRaises(Exception):
             inspect(corrupt)
+
+    def test_docx_is_recognized_and_marked_as_imperfect(self):
+        docx = self.root / 'document.docx'
+        make_docx(docx)
+        meta = inspect(docx)
+        self.assertEqual(meta['kind'], 'document')
+        self.assertEqual(meta['formats'], ['pdf'])
+        self.assertTrue(imperfect_for_extension('docx', 'pdf'))
+        self.assertTrue(imperfect_for_extension('pdf', 'docx'))
+
+    def test_invalid_docx_is_rejected_before_conversion(self):
+        docx = self.root / 'broken.docx'
+        docx.write_bytes(b'not a Word package')
+        with self.assertRaises(ValueError):
+            inspect(docx)
 
 
 if __name__ == '__main__':

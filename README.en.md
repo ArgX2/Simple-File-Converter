@@ -2,7 +2,7 @@
 
 [한국어](README.md) | **English** | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [Español](README.es.md)
 
-A file converter for Windows. Current version: `v1.0.0`. Drop or select files, choose an output format, and convert. You can also convert a single file from the File Explorer context menu. See the [changelog](CHANGELOG.md).
+A file converter for Windows. Current version: `v1.1.0`. Drop or select files, choose an output format, and convert. You can also convert a single file from the File Explorer context menu. See the [changelog](CHANGELOG.md).
 
 ## Download
 
@@ -40,6 +40,8 @@ Translations are bundled in the EXE and work offline. Preferences are saved for 
 - Windows 10/11, 64-bit
 - Running or building from source: Python 3.12, 64-bit
 - PPT/PPTX → PDF and PDF → PPT: **PowerPoint or LibreOffice must be installed**
+- DOCX → PDF: **Microsoft Word or LibreOffice must be installed**
+- PDF → DOCX: built-in text and page-image extraction is used; OCR is not supported.
 - PDF → PPTX: no Office installation needed. Each page becomes an **image slide**; text and shapes are not restored as individually editable objects.
 
 ## Supported formats
@@ -49,8 +51,9 @@ Translations are bundled in the EXE and work offline. Preferences are saved for 
 | MP4, AVI, MKV, MOV, WEBM, WMV, M4V, MPG, MPEG | MP4, AVI, MKV, MOV, WEBM, GIF, PNG, JPG, and audio extraction |
 | MP3, WAV, FLAC, AAC, M4A, OGG, OPUS, WMA | MP3, WAV, FLAC, M4A, OGG, AAC, OPUS |
 | PNG, JPG, JPEG, GIF, WEBP, BMP, TIF, TIFF, ICO | PNG, JPG, WEBP, BMP, TIFF, GIF, PDF |
-| PDF | PNG, JPG, WEBP, TIFF, PPTX, PPT |
+| PDF | PNG, JPG, WEBP, TIFF, PPTX, PPT, DOCX |
 | PPT, PPTX | PDF |
+| DOCX | PDF |
 
 Conversion availability depends on the file contents and installed software. Animated GIF → MP4/WEBM is available in the application window.
 

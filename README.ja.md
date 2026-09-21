@@ -2,7 +2,7 @@
 
 [한국어](README.md) | [English](README.en.md) | **日本語** | [简体中文](README.zh-CN.md) | [Español](README.es.md)
 
-Windows用のファイル変換ソフトです。現在のバージョンは `v1.0.0` です。ファイルをドラッグするか選択し、出力形式を指定して変換できます。エクスプローラーの右クリックメニューから単一ファイルを変換できます。[変更履歴](CHANGELOG.md)
+Windows用のファイル変換ソフトです。現在のバージョンは `v1.1.0` です。ファイルをドラッグするか選択し、出力形式を指定して変換できます。エクスプローラーの右クリックメニューから単一ファイルを変換できます。[変更履歴](CHANGELOG.md)
 
 ## ダウンロード
 
@@ -40,6 +40,8 @@ EXEをダウンロードして起動し、ファイルをドラッグしてく�
 - Windows 10/11、64ビット
 - ソースからの実行・ビルド：Python 3.12、64ビット
 - PPT/PPTX → PDF、PDF → PPT：**PowerPointまたはLibreOfficeのインストールが必要**
+- DOCX → PDF：**Microsoft WordまたはLibreOfficeのインストールが必要**
+- PDF → DOCX：内蔵のテキスト・ページ画像抽出を使用し、OCRには対応していません。
 - PDF → PPTX：Office不要。各ページを **画像スライド** として保存するため、文字や図形を個別に編集できる状態には復元しません。
 
 ## 対応形式
@@ -49,8 +51,9 @@ EXEをダウンロードして起動し、ファイルをドラッグしてく�
 | MP4, AVI, MKV, MOV, WEBM, WMV, M4V, MPG, MPEG | MP4, AVI, MKV, MOV, WEBM, GIF, PNG, JPG、および音声抽出 |
 | MP3, WAV, FLAC, AAC, M4A, OGG, OPUS, WMA | MP3, WAV, FLAC, M4A, OGG, AAC, OPUS |
 | PNG, JPG, JPEG, GIF, WEBP, BMP, TIF, TIFF, ICO | PNG, JPG, WEBP, BMP, TIFF, GIF, PDF |
-| PDF | PNG, JPG, WEBP, TIFF, PPTX, PPT |
+| PDF | PNG, JPG, WEBP, TIFF, PPTX, PPT, DOCX |
 | PPT, PPTX | PDF |
+| DOCX | PDF |
 
 実際に変換できるかどうかは、ファイルの内容やインストール済みソフトに依存します。アニメーションGIFからMP4/WEBMへの変換は、アプリ画面で選択できます。
 

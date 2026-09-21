@@ -10,6 +10,7 @@ Python 3.12와 Windows x64를 기준으로 합니다. 프로젝트 작업 기준
 | `src/engine.py` | 파일 검사와 변환, 취소, 원본 보존 |
 | `src/effects.py` | 드래그 강조, 버튼 효과, 알림 |
 | `src/office.py`, `src/office.ps1` | Office 연동 및 PDF 이미지 슬라이드 생성 |
+| `src/document.py`, `src/word.ps1` | DOCX 검사, PDF↔DOCX 변환 및 품질 안내 |
 | `src/shell_menu.py` | 현재 사용자 우클릭 메뉴 등록·해제 |
 | `src/quick_convert.py` | 우클릭 변환 진행·결과 창 |
 | `src/diagnostics.py` | 배포 실행 파일의 변환 진단 |
@@ -26,6 +27,7 @@ Python 3.12와 Windows x64를 기준으로 합니다. 프로젝트 작업 기준
 ```powershell
 python src\app.py --context-convert jpg "C:\Example\image.png"
 python src\app.py --self-test "build\diagnostics"
+python src\app.py --document-self-test "build\document-diagnostics"
 python src\app.py --smoke-test
 ```
 
@@ -41,6 +43,7 @@ python src\app.py --smoke-test
 2. 변환 결과가 원본 폴더에 생기는지, 체크 해제 후 메뉴가 제거되는지 확인합니다.
 3. PowerPoint 또는 LibreOffice가 설치된 PC에서 PPT/PPTX → PDF와 PDF → PPT를 검증합니다.
 4. Windows 배율 100%/150%, 한글 경로, 긴 파일명, 여러 입력 폴더를 확인합니다.
+5. `--document-self-test`로 DOCX→PDF, PDF→DOCX, 왕복 및 스캔 PDF 출력을 확인합니다.
 
 ## GitHub Actions
 

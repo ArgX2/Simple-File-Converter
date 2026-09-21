@@ -1,5 +1,11 @@
 {
   "en": {
+    "표·배치가 달라질 수 있으며 이미지 중심 문서는 텍스트를 편집할 수 없을 수 있습니다. OCR은 지원하지 않습니다.": "Tables and layout may change. Image-based documents may not contain editable text. OCR is not supported.",
+    "글꼴·배치가 달라질 수 있습니다. Word 편집 기능과 주석·변경 추적 표시는 PDF에 보존되지 않습니다.": "Fonts and layout may change. Word editing features, comments and revision markup are not preserved in PDF.",
+    "DOCX 문서를 읽을 수 없습니다. 암호를 해제하고 파일의 손상 여부를 확인해 주세요.": "Cannot read the DOCX document. Remove its password and check for file damage.",
+    "PDF를 DOCX로 변환하려면 Microsoft Word 2013 이상을 설치해 주세요.": "Install Microsoft Word 2013 or later to convert PDF to DOCX.",
+    "DOCX를 PDF로 변환하려면 Microsoft Word 또는 LibreOffice를 설치해 주세요.": "Install Microsoft Word or LibreOffice to convert DOCX to PDF.",
+    "원본 내용이 DOCX 결과에 포함되지 않았습니다.": "The DOCX output does not contain the original content.",
     "\n실패 항목을 두 번 클릭해 원인을 확인해 주세요.": "\nDouble-click a failed item to see the cause.",
     " (이미지 슬라이드)": " (image slides)",
     " + 음성": " + audio",
@@ -132,6 +138,12 @@
     "{v0}로 불완전 변환": "Convert to {v0} with possible loss"
   },
   "ja": {
+    "표·배치가 달라질 수 있으며 이미지 중심 문서는 텍스트를 편집할 수 없을 수 있습니다. OCR은 지원하지 않습니다.": "表やレイアウトが変わる場合があります。画像中心の文書はテキストを編集できない場合があります。OCRには対応していません。",
+    "글꼴·배치가 달라질 수 있습니다. Word 편집 기능과 주석·변경 추적 표시는 PDF에 보존되지 않습니다.": "フォントやレイアウトが変わる場合があります。Wordの編集機能、コメント、変更履歴の表示はPDFに保存されません。",
+    "DOCX 문서를 읽을 수 없습니다. 암호를 해제하고 파일의 손상 여부를 확인해 주세요.": "DOCX文書を読み込めません。パスワードを解除し、ファイルの破損をご確認ください。",
+    "PDF를 DOCX로 변환하려면 Microsoft Word 2013 이상을 설치해 주세요.": "PDFからDOCXへの変換にはMicrosoft Word 2013以降をインストールしてください。",
+    "DOCX를 PDF로 변환하려면 Microsoft Word 또는 LibreOffice를 설치해 주세요.": "DOCXからPDFへの変換にはMicrosoft WordまたはLibreOfficeをインストールしてください。",
+    "원본 내용이 DOCX 결과에 포함되지 않았습니다.": "DOCXの出力に元の内容が含まれていません。",
     "언어": "言語",
     "자동 (시스템 언어)": "自動（システム言語）",
     "여기에 파일 드래그 혹은 파일 선택": "ファイルをドロップ、または選択",
@@ -264,6 +276,12 @@
     "{v0}로 불완전 변환": "{v0}に不完全変換"
   },
   "zh_CN": {
+    "표·배치가 달라질 수 있으며 이미지 중심 문서는 텍스트를 편집할 수 없을 수 있습니다. OCR은 지원하지 않습니다.": "表格和布局可能改变。以图像为主的文档可能没有可编辑文本。不支持OCR。",
+    "글꼴·배치가 달라질 수 있습니다. Word 편집 기능과 주석·변경 추적 표시는 PDF에 보존되지 않습니다.": "字体和布局可能改变。PDF不保留Word编辑功能、批注和修订标记。",
+    "DOCX 문서를 읽을 수 없습니다. 암호를 해제하고 파일의 손상 여부를 확인해 주세요.": "无法读取DOCX文档。请解除密码并检查文件是否损坏。",
+    "PDF를 DOCX로 변환하려면 Microsoft Word 2013 이상을 설치해 주세요.": "将PDF转换为DOCX需要安装Microsoft Word 2013或更高版本。",
+    "DOCX를 PDF로 변환하려면 Microsoft Word 또는 LibreOffice를 설치해 주세요.": "将DOCX转换为PDF需要安装Microsoft Word或LibreOffice。",
+    "원본 내용이 DOCX 결과에 포함되지 않았습니다.": "DOCX结果未包含原始内容。",
     "언어": "语言",
     "자동 (시스템 언어)": "自动（系统语言）",
     "여기에 파일 드래그 혹은 파일 선택": "将文件拖到这里或选择文件",
@@ -396,6 +414,12 @@
     "{v0}로 불완전 변환": "不完整转换为 {v0}"
   },
   "zh_TW": {
+    "표·배치가 달라질 수 있으며 이미지 중심 문서는 텍스트를 편집할 수 없을 수 있습니다. OCR은 지원하지 않습니다.": "表格與版面可能改變。以影像為主的文件可能沒有可編輯文字。不支援OCR。",
+    "글꼴·배치가 달라질 수 있습니다. Word 편집 기능과 주석·변경 추적 표시는 PDF에 보존되지 않습니다.": "字型與版面可能改變。PDF不保留Word編輯功能、註解和修訂標記。",
+    "DOCX 문서를 읽을 수 없습니다. 암호를 해제하고 파일의 손상 여부를 확인해 주세요.": "無法讀取DOCX文件。請解除密碼並檢查檔案是否損壞。",
+    "PDF를 DOCX로 변환하려면 Microsoft Word 2013 이상을 설치해 주세요.": "將PDF轉換為DOCX需要安裝Microsoft Word 2013或更新版本。",
+    "DOCX를 PDF로 변환하려면 Microsoft Word 또는 LibreOffice를 설치해 주세요.": "將DOCX轉換為PDF需要安裝Microsoft Word或LibreOffice。",
+    "원본 내용이 DOCX 결과에 포함되지 않았습니다.": "DOCX結果未包含原始內容。",
     "언어": "語言",
     "자동 (시스템 언어)": "自動（系統語言）",
     "여기에 파일 드래그 혹은 파일 선택": "將檔案拖曳至此或選擇檔案",
@@ -528,6 +552,12 @@
     "{v0}로 불완전 변환": "不完整轉換為 {v0}"
   },
   "de": {
+    "표·배치가 달라질 수 있으며 이미지 중심 문서는 텍스트를 편집할 수 없을 수 있습니다. OCR은 지원하지 않습니다.": "Tabellen und Layout können sich ändern. Bildbasierte Dokumente enthalten möglicherweise keinen bearbeitbaren Text. OCR wird nicht unterstützt.",
+    "글꼴·배치가 달라질 수 있습니다. Word 편집 기능과 주석·변경 추적 표시는 PDF에 보존되지 않습니다.": "Schriftarten und Layout können sich ändern. Word-Bearbeitungsfunktionen, Kommentare und Änderungsmarkierungen bleiben im PDF nicht erhalten.",
+    "DOCX 문서를 읽을 수 없습니다. 암호를 해제하고 파일의 손상 여부를 확인해 주세요.": "Das DOCX-Dokument kann nicht gelesen werden. Entfernen Sie das Passwort und prüfen Sie die Datei auf Schäden.",
+    "PDF를 DOCX로 변환하려면 Microsoft Word 2013 이상을 설치해 주세요.": "Installieren Sie Microsoft Word 2013 oder neuer, um PDF in DOCX umzuwandeln.",
+    "DOCX를 PDF로 변환하려면 Microsoft Word 또는 LibreOffice를 설치해 주세요.": "Installieren Sie Microsoft Word oder LibreOffice, um DOCX in PDF umzuwandeln.",
+    "원본 내용이 DOCX 결과에 포함되지 않았습니다.": "Die DOCX-Ausgabe enthält den ursprünglichen Inhalt nicht.",
     "언어": "Sprache",
     "자동 (시스템 언어)": "Automatisch (Systemsprache)",
     "여기에 파일 드래그 혹은 파일 선택": "Dateien hier ablegen oder auswählen",
@@ -660,6 +690,12 @@
     "{v0}로 불완전 변환": "Unvollständig in {v0} konvertieren"
   },
   "fr": {
+    "표·배치가 달라질 수 있으며 이미지 중심 문서는 텍스트를 편집할 수 없을 수 있습니다. OCR은 지원하지 않습니다.": "Les tableaux et la mise en page peuvent changer. Les documents à base d’images peuvent ne pas contenir de texte modifiable. La reconnaissance OCR n’est pas prise en charge.",
+    "글꼴·배치가 달라질 수 있습니다. Word 편집 기능과 주석·변경 추적 표시는 PDF에 보존되지 않습니다.": "Les polices et la mise en page peuvent changer. Les fonctions d’édition Word, commentaires et marques de révision ne sont pas conservés dans le PDF.",
+    "DOCX 문서를 읽을 수 없습니다. 암호를 해제하고 파일의 손상 여부를 확인해 주세요.": "Impossible de lire le document DOCX. Retirez son mot de passe et vérifiez que le fichier n’est pas endommagé.",
+    "PDF를 DOCX로 변환하려면 Microsoft Word 2013 이상을 설치해 주세요.": "Installez Microsoft Word 2013 ou une version ultérieure pour convertir un PDF en DOCX.",
+    "DOCX를 PDF로 변환하려면 Microsoft Word 또는 LibreOffice를 설치해 주세요.": "Installez Microsoft Word ou LibreOffice pour convertir un DOCX en PDF.",
+    "원본 내용이 DOCX 결과에 포함되지 않았습니다.": "Le résultat DOCX ne contient pas le contenu d’origine.",
     "언어": "Langue",
     "자동 (시스템 언어)": "Automatique (langue du système)",
     "여기에 파일 드래그 혹은 파일 선택": "Déposez des fichiers ici ou sélectionnez-les",
@@ -792,6 +828,12 @@
     "{v0}로 불완전 변환": "Convertir en {v0} avec des pertes possibles"
   },
   "es": {
+    "표·배치가 달라질 수 있으며 이미지 중심 문서는 텍스트를 편집할 수 없을 수 있습니다. OCR은 지원하지 않습니다.": "Las tablas y el diseño pueden cambiar. Los documentos basados en imágenes pueden no contener texto editable. No se admite OCR.",
+    "글꼴·배치가 달라질 수 있습니다. Word 편집 기능과 주석·변경 추적 표시는 PDF에 보존되지 않습니다.": "Las fuentes y el diseño pueden cambiar. El PDF no conserva las funciones de edición de Word, los comentarios ni las marcas de revisión.",
+    "DOCX 문서를 읽을 수 없습니다. 암호를 해제하고 파일의 손상 여부를 확인해 주세요.": "No se puede leer el documento DOCX. Quite la contraseña y compruebe si el archivo está dañado.",
+    "PDF를 DOCX로 변환하려면 Microsoft Word 2013 이상을 설치해 주세요.": "Instale Microsoft Word 2013 o posterior para convertir PDF a DOCX.",
+    "DOCX를 PDF로 변환하려면 Microsoft Word 또는 LibreOffice를 설치해 주세요.": "Instale Microsoft Word o LibreOffice para convertir DOCX a PDF.",
+    "원본 내용이 DOCX 결과에 포함되지 않았습니다.": "El DOCX generado no contiene el contenido original.",
     "언어": "Idioma",
     "자동 (시스템 언어)": "Automático (idioma del sistema)",
     "여기에 파일 드래그 혹은 파일 선택": "Arrastra archivos aquí o selecciónalos",
@@ -924,6 +966,12 @@
     "{v0}로 불완전 변환": "Convertir a {v0} de forma incompleta"
   },
   "pt": {
+    "표·배치가 달라질 수 있으며 이미지 중심 문서는 텍스트를 편집할 수 없을 수 있습니다. OCR은 지원하지 않습니다.": "As tabelas e o layout podem mudar. Documentos baseados em imagens podem não conter texto editável. OCR não é suportado.",
+    "글꼴·배치가 달라질 수 있습니다. Word 편집 기능과 주석·변경 추적 표시는 PDF에 보존되지 않습니다.": "As fontes e o layout podem mudar. O PDF não preserva os recursos de edição do Word, comentários ou marcas de revisão.",
+    "DOCX 문서를 읽을 수 없습니다. 암호를 해제하고 파일의 손상 여부를 확인해 주세요.": "Não foi possível ler o documento DOCX. Remova a senha e verifique se o arquivo está danificado.",
+    "PDF를 DOCX로 변환하려면 Microsoft Word 2013 이상을 설치해 주세요.": "Instale o Microsoft Word 2013 ou posterior para converter PDF em DOCX.",
+    "DOCX를 PDF로 변환하려면 Microsoft Word 또는 LibreOffice를 설치해 주세요.": "Instale o Microsoft Word ou LibreOffice para converter DOCX em PDF.",
+    "원본 내용이 DOCX 결과에 포함되지 않았습니다.": "O DOCX gerado não contém o conteúdo original.",
     "언어": "Idioma",
     "자동 (시스템 언어)": "Automático (idioma do sistema)",
     "여기에 파일 드래그 혹은 파일 선택": "Arraste arquivos aqui ou selecione-os",
@@ -1056,6 +1104,12 @@
     "{v0}로 불완전 변환": "Converter para {v0} de forma incompleta"
   },
   "it": {
+    "표·배치가 달라질 수 있으며 이미지 중심 문서는 텍스트를 편집할 수 없을 수 있습니다. OCR은 지원하지 않습니다.": "Tabelle e impaginazione possono cambiare. I documenti basati su immagini potrebbero non contenere testo modificabile. OCR non è supportato.",
+    "글꼴·배치가 달라질 수 있습니다. Word 편집 기능과 주석·변경 추적 표시는 PDF에 보존되지 않습니다.": "Caratteri e impaginazione possono cambiare. Il PDF non conserva le funzioni di modifica di Word, i commenti e i segni di revisione.",
+    "DOCX 문서를 읽을 수 없습니다. 암호를 해제하고 파일의 손상 여부를 확인해 주세요.": "Impossibile leggere il documento DOCX. Rimuovere la password e verificare che il file non sia danneggiato.",
+    "PDF를 DOCX로 변환하려면 Microsoft Word 2013 이상을 설치해 주세요.": "Installare Microsoft Word 2013 o successivo per convertire PDF in DOCX.",
+    "DOCX를 PDF로 변환하려면 Microsoft Word 또는 LibreOffice를 설치해 주세요.": "Installare Microsoft Word o LibreOffice per convertire DOCX in PDF.",
+    "원본 내용이 DOCX 결과에 포함되지 않았습니다.": "Il DOCX generato non contiene il contenuto originale.",
     "언어": "Lingua",
     "자동 (시스템 언어)": "Automatica (lingua di sistema)",
     "여기에 파일 드래그 혹은 파일 선택": "Trascina qui i file o selezionali",
@@ -1188,6 +1242,12 @@
     "{v0}로 불완전 변환": "Conversione incompleta in {v0}"
   },
   "ru": {
+    "표·배치가 달라질 수 있으며 이미지 중심 문서는 텍스트를 편집할 수 없을 수 있습니다. OCR은 지원하지 않습니다.": "Таблицы и расположение элементов могут измениться. Документы на основе изображений могут не содержать редактируемого текста. OCR не поддерживается.",
+    "글꼴·배치가 달라질 수 있습니다. Word 편집 기능과 주석·변경 추적 표시는 PDF에 보존되지 않습니다.": "Шрифты и расположение элементов могут измениться. PDF не сохраняет функции редактирования Word, комментарии и пометки исправлений.",
+    "DOCX 문서를 읽을 수 없습니다. 암호를 해제하고 파일의 손상 여부를 확인해 주세요.": "Не удалось прочитать документ DOCX. Снимите пароль и проверьте файл на повреждения.",
+    "PDF를 DOCX로 변환하려면 Microsoft Word 2013 이상을 설치해 주세요.": "Для преобразования PDF в DOCX установите Microsoft Word 2013 или новее.",
+    "DOCX를 PDF로 변환하려면 Microsoft Word 또는 LibreOffice를 설치해 주세요.": "Для преобразования DOCX в PDF установите Microsoft Word или LibreOffice.",
+    "원본 내용이 DOCX 결과에 포함되지 않았습니다.": "Результат DOCX не содержит исходного содержимого.",
     "언어": "Язык",
     "자동 (시스템 언어)": "Автоматически (язык системы)",
     "여기에 파일 드래그 혹은 파일 선택": "Перетащите файлы сюда или выберите их",
@@ -1320,6 +1380,12 @@
     "{v0}로 불완전 변환": "Неполное преобразование в {v0}"
   },
   "vi": {
+    "표·배치가 달라질 수 있으며 이미지 중심 문서는 텍스트를 편집할 수 없을 수 있습니다. OCR은 지원하지 않습니다.": "Bảng và bố cục có thể thay đổi. Tài liệu dạng hình ảnh có thể không có văn bản chỉnh sửa được. Không hỗ trợ OCR.",
+    "글꼴·배치가 달라질 수 있습니다. Word 편집 기능과 주석·변경 추적 표시는 PDF에 보존되지 않습니다.": "Phông chữ và bố cục có thể thay đổi. PDF không giữ các tính năng chỉnh sửa Word, nhận xét và dấu theo dõi thay đổi.",
+    "DOCX 문서를 읽을 수 없습니다. 암호를 해제하고 파일의 손상 여부를 확인해 주세요.": "Không thể đọc tài liệu DOCX. Hãy gỡ mật khẩu và kiểm tra tệp có bị hỏng không.",
+    "PDF를 DOCX로 변환하려면 Microsoft Word 2013 이상을 설치해 주세요.": "Cài Microsoft Word 2013 trở lên để chuyển PDF sang DOCX.",
+    "DOCX를 PDF로 변환하려면 Microsoft Word 또는 LibreOffice를 설치해 주세요.": "Cài Microsoft Word hoặc LibreOffice để chuyển DOCX sang PDF.",
+    "원본 내용이 DOCX 결과에 포함되지 않았습니다.": "Kết quả DOCX không chứa nội dung gốc.",
     "언어": "Ngôn ngữ",
     "자동 (시스템 언어)": "Tự động (ngôn ngữ hệ thống)",
     "여기에 파일 드래그 혹은 파일 선택": "Kéo tệp vào đây hoặc chọn tệp",
@@ -1452,6 +1518,12 @@
     "{v0}로 불완전 변환": "Chuyển sang {v0} không hoàn chỉnh"
   },
   "th": {
+    "표·배치가 달라질 수 있으며 이미지 중심 문서는 텍스트를 편집할 수 없을 수 있습니다. OCR은 지원하지 않습니다.": "ตารางและเค้าโครงอาจเปลี่ยนไป เอกสารที่เป็นภาพอาจไม่มีข้อความที่แก้ไขได้ ไม่รองรับ OCR",
+    "글꼴·배치가 달라질 수 있습니다. Word 편집 기능과 주석·변경 추적 표시는 PDF에 보존되지 않습니다.": "แบบอักษรและเค้าโครงอาจเปลี่ยนไป PDF ไม่เก็บคุณสมบัติการแก้ไขของ Word ข้อคิดเห็น และเครื่องหมายการแก้ไข",
+    "DOCX 문서를 읽을 수 없습니다. 암호를 해제하고 파일의 손상 여부를 확인해 주세요.": "ไม่สามารถอ่านเอกสาร DOCX ได้ โปรดนำรหัสผ่านออกและตรวจสอบว่าไฟล์เสียหายหรือไม่",
+    "PDF를 DOCX로 변환하려면 Microsoft Word 2013 이상을 설치해 주세요.": "ติดตั้ง Microsoft Word 2013 หรือใหม่กว่าเพื่อแปลง PDF เป็น DOCX",
+    "DOCX를 PDF로 변환하려면 Microsoft Word 또는 LibreOffice를 설치해 주세요.": "ติดตั้ง Microsoft Word หรือ LibreOffice เพื่อแปลง DOCX เป็น PDF",
+    "원본 내용이 DOCX 결과에 포함되지 않았습니다.": "ผลลัพธ์ DOCX ไม่มีเนื้อหาต้นฉบับ",
     "언어": "ภาษา",
     "자동 (시스템 언어)": "อัตโนมัติ (ภาษาของระบบ)",
     "여기에 파일 드래그 혹은 파일 선택": "ลากไฟล์มาที่นี่หรือเลือกไฟล์",
@@ -1584,6 +1656,12 @@
     "{v0}로 불완전 변환": "แปลงเป็น {v0} แบบไม่สมบูรณ์"
   },
   "id": {
+    "표·배치가 달라질 수 있으며 이미지 중심 문서는 텍스트를 편집할 수 없을 수 있습니다. OCR은 지원하지 않습니다.": "Tabel dan tata letak dapat berubah. Dokumen berbasis gambar mungkin tidak memiliki teks yang dapat diedit. OCR tidak didukung.",
+    "글꼴·배치가 달라질 수 있습니다. Word 편집 기능과 주석·변경 추적 표시는 PDF에 보존되지 않습니다.": "Font dan tata letak dapat berubah. PDF tidak mempertahankan fitur pengeditan Word, komentar, atau tanda revisi.",
+    "DOCX 문서를 읽을 수 없습니다. 암호를 해제하고 파일의 손상 여부를 확인해 주세요.": "Dokumen DOCX tidak dapat dibaca. Hapus kata sandi dan periksa kerusakan berkas.",
+    "PDF를 DOCX로 변환하려면 Microsoft Word 2013 이상을 설치해 주세요.": "Instal Microsoft Word 2013 atau lebih baru untuk mengonversi PDF ke DOCX.",
+    "DOCX를 PDF로 변환하려면 Microsoft Word 또는 LibreOffice를 설치해 주세요.": "Instal Microsoft Word atau LibreOffice untuk mengonversi DOCX ke PDF.",
+    "원본 내용이 DOCX 결과에 포함되지 않았습니다.": "Hasil DOCX tidak memuat konten asli.",
     "언어": "Bahasa",
     "자동 (시스템 언어)": "Otomatis (bahasa sistem)",
     "여기에 파일 드래그 혹은 파일 선택": "Seret berkas ke sini atau pilih berkas",
@@ -1716,6 +1794,12 @@
     "{v0}로 불완전 변환": "Konversi ke {v0} secara tidak sempurna"
   },
   "ar": {
+    "표·배치가 달라질 수 있으며 이미지 중심 문서는 텍스트를 편집할 수 없을 수 있습니다. OCR은 지원하지 않습니다.": "قد تتغير الجداول والتخطيط. قد لا تحتوي المستندات القائمة على الصور على نص قابل للتحرير. التعرف الضوئي على النصوص غير مدعوم.",
+    "글꼴·배치가 달라질 수 있습니다. Word 편집 기능과 주석·변경 추적 표시는 PDF에 보존되지 않습니다.": "قد تتغير الخطوط والتخطيط. لا يحتفظ PDF بميزات تحرير Word أو التعليقات أو علامات المراجعة.",
+    "DOCX 문서를 읽을 수 없습니다. 암호를 해제하고 파일의 손상 여부를 확인해 주세요.": "تعذرت قراءة مستند DOCX. أزل كلمة المرور وتحقق من تلف الملف.",
+    "PDF를 DOCX로 변환하려면 Microsoft Word 2013 이상을 설치해 주세요.": "ثبّت Microsoft Word 2013 أو أحدث لتحويل PDF إلى DOCX.",
+    "DOCX를 PDF로 변환하려면 Microsoft Word 또는 LibreOffice를 설치해 주세요.": "ثبّت Microsoft Word أو LibreOffice لتحويل DOCX إلى PDF.",
+    "원본 내용이 DOCX 결과에 포함되지 않았습니다.": "لا يحتوي ملف DOCX الناتج على المحتوى الأصلي.",
     "언어": "اللغة",
     "자동 (시스템 언어)": "تلقائي (لغة النظام)",
     "여기에 파일 드래그 혹은 파일 선택": "اسحب الملفات هنا أو اختر ملفات",
@@ -1848,6 +1932,12 @@
       "{v0}로 불완전 변환": "تحويل غير مكتمل إلى {v0}"
   },
   "he": {
+    "표·배치가 달라질 수 있으며 이미지 중심 문서는 텍스트를 편집할 수 없을 수 있습니다. OCR은 지원하지 않습니다.": "הטבלאות והפריסה עשויות להשתנות. ייתכן שמסמכים המבוססים על תמונות לא יכילו טקסט הניתן לעריכה. אין תמיכה ב-OCR.",
+    "글꼴·배치가 달라질 수 있습니다. Word 편집 기능과 주석·변경 추적 표시는 PDF에 보존되지 않습니다.": "הגופנים והפריסה עשויים להשתנות. PDF אינו שומר את תכונות העריכה של Word, הערות וסימוני שינויים.",
+    "DOCX 문서를 읽을 수 없습니다. 암호를 해제하고 파일의 손상 여부를 확인해 주세요.": "לא ניתן לקרוא את מסמך DOCX. יש להסיר את הסיסמה ולבדוק אם הקובץ פגום.",
+    "PDF를 DOCX로 변환하려면 Microsoft Word 2013 이상을 설치해 주세요.": "יש להתקין Microsoft Word 2013 או חדש יותר כדי להמיר PDF ל-DOCX.",
+    "DOCX를 PDF로 변환하려면 Microsoft Word 또는 LibreOffice를 설치해 주세요.": "יש להתקין Microsoft Word או LibreOffice כדי להמיר DOCX ל-PDF.",
+    "원본 내용이 DOCX 결과에 포함되지 않았습니다.": "פלט DOCX אינו מכיל את התוכן המקורי.",
     "언어": "שפה",
     "자동 (시스템 언어)": "אוטומטי (שפת המערכת)",
     "여기에 파일 드래그 혹은 파일 선택": "גררו לכאן קבצים או בחרו קבצים",

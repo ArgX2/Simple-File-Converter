@@ -2,7 +2,7 @@
 
 [한국어](README.md) | [English](README.en.md) | [日本語](README.ja.md) | **简体中文** | [Español](README.es.md)
 
-适用于 Windows 的文件转换工具。当前版本为 `v1.0.0`。拖入或选择文件，指定输出格式，即可转换。也可以通过文件资源管理器的右键菜单转换单个文件。请查看[更新记录](CHANGELOG.md)。
+适用于 Windows 的文件转换工具。当前版本为 `v1.1.0`。拖入或选择文件，指定输出格式，即可转换。也可以通过文件资源管理器的右键菜单转换单个文件。请查看[更新记录](CHANGELOG.md)。
 
 ## 下载
 
@@ -40,6 +40,8 @@
 - Windows 10/11，64 位
 - 从源码运行或构建：Python 3.12，64 位
 - PPT/PPTX → PDF、PDF → PPT：**需要安装 PowerPoint 或 LibreOffice**
+- DOCX → PDF：**需要安装 Microsoft Word 或 LibreOffice**
+- PDF → DOCX：使用内置文本和页面图像提取，不支持 OCR。
 - PDF → PPTX：无需安装 Office。每页保存为一张 **图片幻灯片**，不会恢复为文字、图形可单独编辑的对象。
 
 ## 支持的格式
@@ -49,8 +51,9 @@
 | MP4, AVI, MKV, MOV, WEBM, WMV, M4V, MPG, MPEG | MP4, AVI, MKV, MOV, WEBM, GIF, PNG, JPG，以及音频提取 |
 | MP3, WAV, FLAC, AAC, M4A, OGG, OPUS, WMA | MP3, WAV, FLAC, M4A, OGG, AAC, OPUS |
 | PNG, JPG, JPEG, GIF, WEBP, BMP, TIF, TIFF, ICO | PNG, JPG, WEBP, BMP, TIFF, GIF, PDF |
-| PDF | PNG, JPG, WEBP, TIFF, PPTX, PPT |
+| PDF | PNG, JPG, WEBP, TIFF, PPTX, PPT, DOCX |
 | PPT, PPTX | PDF |
+| DOCX | PDF |
 
 实际能否转换取决于文件内容和已安装的软件。动态 GIF 转 MP4/WEBM 可在程序窗口中选择。
 

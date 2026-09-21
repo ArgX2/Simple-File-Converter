@@ -9,6 +9,7 @@ from PySide6.QtCore import Qt, Signal, QThread, QUrl, QTimer, QEvent, QPropertyA
 from PySide6.QtGui import QDesktopServices, QIcon, QColor
 from PySide6.QtWidgets import QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, QLabel, QPushButton, QTableWidget, QTableWidgetItem, QComboBox, QFileDialog, QLineEdit, QProgressBar, QMessageBox, QHeaderView, QAbstractItemView, QCheckBox
 from engine import inspect, convert, Cancelled, IMAGES, MEDIA, imperfect_for_extension
+from document import quality_note
 from effects import AnimatedButton, DragGlow, ToastManager
 QPushButton = AnimatedButton
 
@@ -184,6 +185,7 @@ class Window(QMainWindow):
                 fmt = combo.itemData(index)
                 label = tr('{v0}로 불완전 변환', v0=fmt.upper()) if imperfect_for_extension(entry['path'].suffix, fmt) else tr('{v0}로 변환', v0=fmt.upper())
                 combo.setItemText(index, label)
+            combo.setToolTip(quality_note(entry['path'].suffix, combo.currentData()))
         if self.entries and all(entry['state'] != '대기' for entry in self.entries):
             self.status.setText(' · '.join(tr('{v0} {v1}개', v0=tr(state), v1=sum(e['state'] == state for e in self.entries)) for state in ['완료', '실패', '취소됨']))
         else:
@@ -254,7 +256,7 @@ class Window(QMainWindow):
         self.add_files([u.toLocalFile() for u in event.mimeData().urls() if u.isLocalFile()])
         event.acceptProposedAction()
     def choose_files(self):
-        patterns = ' '.join('*.' + e for e in sorted(IMAGES | MEDIA | {'pdf', 'ppt', 'pptx'}))
+        patterns = ' '.join('*.' + e for e in sorted(IMAGES | MEDIA | {'pdf', 'docx', 'ppt', 'pptx'}))
         paths, _ = QFileDialog.getOpenFileNames(self, tr('변환할 파일 선택'), '', tr('지원 파일 ({v0});;모든 파일 (*)', v0=patterns))
         self.add_files(paths)
     def add_files(self, paths):
@@ -301,6 +303,8 @@ class Window(QMainWindow):
                 combo.addItem(label, fmt)
             ext = path.suffix.lower()[1:]
             if combo.currentData() == ext and combo.count() > 1: combo.setCurrentIndex(1)
+            combo.setToolTip(quality_note(path.suffix, combo.currentData()))
+            combo.currentIndexChanged.connect(lambda _index, box=combo, suffix=path.suffix: box.setToolTip(quality_note(suffix, box.currentData())))
             self.table.setCellWidget(row, 2, combo)
             self.table.setItem(row, 3, QTableWidgetItem(tr('대기')))
             self.entries.append({'path': path, 'meta': meta, 'result': '', 'state': '대기'})
@@ -394,7 +398,8 @@ class Window(QMainWindow):
     def receive(self, row, state, result):
         self.entries[row].update(state=state, result=result)
         self.table.item(row, 3).setText(tr(state) + (tr(' · 두 번 클릭') if result else ''))
-        self.table.item(row, 3).setToolTip(result)
+        note = quality_note(self.entries[row]['path'].suffix, self.table.cellWidget(row, 2).currentData()) if state == '완료' else ''
+        self.table.item(row, 3).setToolTip(result + ('\n\n' + note if note else ''))
         self.table.item(row, 3).setForeground(QColor({'완료': '#168653', '실패': '#d83d51'}.get(state, '#3264d9')))
         if state == '실패': self.notify(tr('파일을 변환하지 못했습니다'), self.entries[row]['path'].name, 'error', result)
         self.done_count += 1
@@ -462,6 +467,9 @@ QProgressBar::chunk { background: #7392ef; border-radius: 5px; }
 '''
 
 if __name__ == '__main__':
+    if '--document-self-test' in sys.argv:
+        from diagnostics import run_documents
+        sys.exit(run_documents(sys.argv[sys.argv.index('--document-self-test') + 1]))
     if '--self-test' in sys.argv:
         from diagnostics import run
         sys.exit(run(sys.argv[sys.argv.index('--self-test') + 1]))

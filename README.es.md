@@ -2,7 +2,7 @@
 
 [한국어](README.md) | [English](README.en.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | **Español**
 
-Conversor de archivos para Windows. Versión actual: `v1.0.0`. Arrastra o selecciona archivos, elige el formato de salida y conviértelos. También puedes convertir un solo archivo desde el menú contextual del Explorador. Consulta el [historial de cambios](CHANGELOG.md).
+Conversor de archivos para Windows. Versión actual: `v1.1.0`. Arrastra o selecciona archivos, elige el formato de salida y conviértelos. También puedes convertir un solo archivo desde el menú contextual del Explorador. Consulta el [historial de cambios](CHANGELOG.md).
 
 ## Descargas
 
@@ -40,6 +40,8 @@ Las traducciones están incluidas en el EXE y funcionan sin conexión. La prefer
 - Windows 10/11 de 64 bits
 - Para ejecutar o compilar desde el código fuente: Python 3.12 de 64 bits
 - PPT/PPTX → PDF y PDF → PPT: **requieren PowerPoint o LibreOffice instalado**
+- DOCX → PDF: **requiere Microsoft Word o LibreOffice instalado**
+- PDF → DOCX: usa extracción integrada de texto e imágenes de página; no admite OCR.
 - PDF → PPTX: no requiere Office. Cada página se guarda como una **diapositiva de imagen**; el texto y las formas no se recuperan como objetos editables por separado.
 
 ## Formatos compatibles
@@ -49,8 +51,9 @@ Las traducciones están incluidas en el EXE y funcionan sin conexión. La prefer
 | MP4, AVI, MKV, MOV, WEBM, WMV, M4V, MPG, MPEG | MP4, AVI, MKV, MOV, WEBM, GIF, PNG, JPG y extracción de audio |
 | MP3, WAV, FLAC, AAC, M4A, OGG, OPUS, WMA | MP3, WAV, FLAC, M4A, OGG, AAC, OPUS |
 | PNG, JPG, JPEG, GIF, WEBP, BMP, TIF, TIFF, ICO | PNG, JPG, WEBP, BMP, TIFF, GIF, PDF |
-| PDF | PNG, JPG, WEBP, TIFF, PPTX, PPT |
+| PDF | PNG, JPG, WEBP, TIFF, PPTX, PPT, DOCX |
 | PPT, PPTX | PDF |
+| DOCX | PDF |
 
 La disponibilidad de cada conversión depende del contenido del archivo y del software instalado. La conversión de GIF animado a MP4/WEBM se puede seleccionar en la ventana del programa.
 
