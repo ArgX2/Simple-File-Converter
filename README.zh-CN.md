@@ -49,10 +49,12 @@
 | MP4, AVI, MKV, MOV, WEBM, WMV, M4V, MPG, MPEG | MP4, AVI, MKV, MOV, WEBM, GIF, PNG, JPG，以及音频提取 |
 | MP3, WAV, FLAC, AAC, M4A, OGG, OPUS, WMA | MP3, WAV, FLAC, M4A, OGG, AAC, OPUS |
 | PNG, JPG, JPEG, GIF, WEBP, BMP, TIF, TIFF, ICO | PNG, JPG, WEBP, BMP, TIFF, GIF, PDF |
-| PDF | PNG, JPG, WEBP, TIFF, PPTX, PPT |
+| PDF | TXT, PNG, JPG, WEBP, TIFF, PPTX, PPT |
 | PPT, PPTX | PDF |
 
 实际能否转换取决于文件内容和已安装的软件。动态 GIF 转 MP4/WEBM 可在程序窗口中选择。
+
+PDF → TXT 会按页面顺序提取文本并保存为 UTF-8 TXT 文件。扫描 PDF 以及文字、表格和图片的原始位置不会被恢复。
 
 ## 使用方法
 

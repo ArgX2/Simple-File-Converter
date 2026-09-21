@@ -49,10 +49,12 @@ EXE를 다운로드한 뒤 실행하고 파일을 드래그하면 됩니다. 지
 | MP4, AVI, MKV, MOV, WEBM, WMV, M4V, MPG, MPEG | MP4, AVI, MKV, MOV, WEBM, GIF, PNG, JPG 및 음성 추출 |
 | MP3, WAV, FLAC, AAC, M4A, OGG, OPUS, WMA | MP3, WAV, FLAC, M4A, OGG, AAC, OPUS |
 | PNG, JPG, JPEG, GIF, WEBP, BMP, TIF, TIFF, ICO | PNG, JPG, WEBP, BMP, TIFF, GIF, PDF |
-| PDF | PNG, JPG, WEBP, TIFF, PPTX, PPT |
+| PDF | TXT, PNG, JPG, WEBP, TIFF, PPTX, PPT |
 | PPT, PPTX | PDF |
 
 실제 변환 가능 여부는 파일 내용과 설치된 프로그램에 따라 달라집니다. 움직이는 GIF의 MP4/WEBM 변환은 프로그램 창에서 선택할 수 있습니다.
+
+PDF를 TXT로 변환하면 페이지 순서대로 텍스트를 추출해 UTF-8 TXT 파일로 저장합니다. 스캔 PDF나 텍스트 위치·표·이미지는 그대로 복원되지 않습니다.
 
 ## 사용 방법
 

@@ -287,9 +287,10 @@ class Window(QMainWindow):
             self.table.setItem(row, 0, item)
             self.table.setItem(row, 1, QTableWidgetItem(meta['detail']))
             combo = QComboBox()
-            combo.addItems([f.upper() for f in meta['formats']])
+            for fmt in meta['formats']:
+                combo.addItem(fmt.upper(), fmt)
             ext = path.suffix.lower()[1:]
-            if combo.currentText().lower() == ext and combo.count() > 1: combo.setCurrentIndex(1)
+            if combo.currentData() == ext and combo.count() > 1: combo.setCurrentIndex(1)
             self.table.setCellWidget(row, 2, combo)
             self.table.setItem(row, 3, QTableWidgetItem(tr('대기')))
             self.entries.append({'path': path, 'meta': meta, 'result': '', 'state': '대기'})
@@ -340,10 +341,10 @@ class Window(QMainWindow):
         self.cancel.setEnabled(busy)
     def begin(self):
         if self.busy() or not self.entries: return
-        reverse = [i for i,e in enumerate(self.entries) if e['meta']['kind'] == 'pdf' and self.table.cellWidget(i, 2).currentText().lower() in {'ppt', 'pptx'}]
+        reverse = [i for i,e in enumerate(self.entries) if e['meta']['kind'] == 'pdf' and self.table.cellWidget(i, 2).currentData() in {'ppt', 'pptx'}]
         if reverse:
             from office import backend
-            if any(self.table.cellWidget(i, 2).currentText() == 'PPT' for i in reverse) and not backend()[0]:
+            if any(self.table.cellWidget(i, 2).currentData() == 'ppt' for i in reverse) and not backend()[0]:
                 QMessageBox.warning(self, tr('PPT 변환 프로그램이 필요합니다'), tr('PowerPoint 또는 LibreOffice를 설치해 주세요.\nPPTX를 선택하면 별도 설치 없이 변환할 수 있습니다.'))
                 return
             if not self.presentation_consent:
@@ -362,7 +363,7 @@ class Window(QMainWindow):
             self.notify(tr('이 폴더에 저장할 수 없습니다'), tr('다른 폴더를 선택하거나 접근 권한을 확인해 주세요.'), 'error', str(e))
             return
         self.last_folder = folder
-        jobs = [(i, e['path'], self.table.cellWidget(i, 2).currentText().lower(), e['meta']) for i, e in enumerate(self.entries)]
+        jobs = [(i, e['path'], self.table.cellWidget(i, 2).currentData(), e['meta']) for i, e in enumerate(self.entries)]
         self.done_count = 0
         self.login_prompted = False
         for i, e in enumerate(self.entries):
@@ -461,10 +462,11 @@ if __name__ == '__main__':
     if '--context-convert' in sys.argv:
         from quick_convert import QuickConvert
         index = sys.argv.index('--context-convert')
-        if len(sys.argv) != index + 3:
+        if len(sys.argv) < index + 3:
             QMessageBox.warning(None, 'Simple File Converter', tr('변환할 파일과 형식을 확인해 주세요.'))
             sys.exit(1)
-        window = QuickConvert(Path(sys.argv[index + 2]).resolve(), sys.argv[index + 1].lower(), Worker)
+        paths = [Path(value).resolve() for value in sys.argv[index + 2:]]
+        window = QuickConvert(paths, sys.argv[index + 1].lower(), Worker)
     else:
         window = Window()
     window.show()

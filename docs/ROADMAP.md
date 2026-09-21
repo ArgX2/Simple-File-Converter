@@ -18,6 +18,7 @@
 - **PDF와 문서 형식의 양방향 변환**:
   - PDF → `HTML`: 텍스트와 이미지 중심의 웹 문서로 변환합니다. 원본의 모든 위치·글꼴·상호작용을 그대로 보장하지 않습니다.
   - PDF → `PNG`: 현재처럼 페이지별 이미지로 저장합니다. 역방향 PNG → PDF는 이미지가 들어간 PDF를 만듭니다.
+  - PDF → `TXT`: 페이지 순서대로 텍스트를 추출합니다. 위치·표·이미지는 보존하지 않습니다.
   - PDF → `Markdown`: 텍스트와 제목·목록을 추출합니다. 표, 배치, 이미지 위치는 원본과 달라질 수 있습니다.
   - `HTML` → PDF: 웹 페이지를 인쇄용 PDF로 렌더링합니다. 외부 폰트·스크립트·인터넷 자료는 별도 처리가 필요합니다.
   - `Markdown` → PDF: Markdown을 HTML 또는 문서로 렌더링한 뒤 PDF로 저장합니다.
@@ -33,7 +34,7 @@
 | PPT, PPTX, ODP | PDF, 이미지 | 기존 Office 연동 확장 |
 | SVG | PNG, JPG, PDF | SVG 렌더러 추가 |
 | TXT, HTML, Markdown | PDF, TXT, HTML | 전용 문서 렌더링 추가 |
-| PDF | HTML, PNG, Markdown | PDF 텍스트·이미지 추출 및 페이지 렌더링 |
+| PDF | TXT, HTML, PNG, Markdown | PDF 텍스트·이미지 추출 및 페이지 렌더링 |
 | HTML, Markdown | PDF, PNG | HTML/문서 렌더러 추가 |
 | PNG, JPG, TIFF 묶음 | 다중 페이지 PDF | 이미지 순서·페이지 크기 지정 |
 | ZIP, 7Z, TAR 계열 | 압축 해제 후 일괄 변환 | 압축 형식별 라이브러리 추가 |

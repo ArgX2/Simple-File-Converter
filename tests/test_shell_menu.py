@@ -19,6 +19,7 @@ class ShellMenuTests(unittest.TestCase):
         self.assertTrue(shell_menu.is_enabled())
         with self.registry.OpenKey(1, shell_menu.menu_key('png')) as key:
             self.assertEqual(self.registry.QueryValueEx(key, 'MUIVerb')[0], 'Simple File Converter')
+            self.assertEqual(self.registry.QueryValueEx(key, 'MultiSelectModel')[0], 'Player')
             group = self.registry.QueryValueEx(key, 'ExtendedSubCommandsKey')[0]
         commands = []
         for path, values in self.registry.data.items():
@@ -26,7 +27,7 @@ class ShellMenuTests(unittest.TestCase):
                 commands.append(values[''][0])
         self.assertEqual(len(commands), 6)
         for fmt in ['jpg', 'webp', 'bmp', 'tiff', 'gif', 'pdf']:
-            expected = f'"C:\\Example Folder\\Simple File Converter.exe" --context-convert {fmt} "%1"'
+            expected = f'"C:\\Example Folder\\Simple File Converter.exe" --context-convert {fmt} %*'
             self.assertIn(expected, commands)
 
     def test_disable_removes_only_owned_keys(self):
@@ -38,6 +39,12 @@ class ShellMenuTests(unittest.TestCase):
         self.assertFalse(shell_menu.is_enabled())
         self.assertIn(unrelated, self.registry.data)
         self.assertFalse(any('SimpleFileConverter' in path for path in self.registry.data))
+
+    def test_format_commands_accept_multiple_selected_files(self):
+        shell_menu.enable()
+        for path, values in self.registry.data.items():
+            if path.endswith('\\command') and 'jpg' in path:
+                self.assertTrue(values[''][0].endswith('--context-convert jpg %*'))
 
     def test_registration_failure_rolls_back(self):
         original = shell_menu.put

@@ -49,10 +49,12 @@ Translations are bundled in the EXE and work offline. Preferences are saved for 
 | MP4, AVI, MKV, MOV, WEBM, WMV, M4V, MPG, MPEG | MP4, AVI, MKV, MOV, WEBM, GIF, PNG, JPG, and audio extraction |
 | MP3, WAV, FLAC, AAC, M4A, OGG, OPUS, WMA | MP3, WAV, FLAC, M4A, OGG, AAC, OPUS |
 | PNG, JPG, JPEG, GIF, WEBP, BMP, TIF, TIFF, ICO | PNG, JPG, WEBP, BMP, TIFF, GIF, PDF |
-| PDF | PNG, JPG, WEBP, TIFF, PPTX, PPT |
+| PDF | TXT, PNG, JPG, WEBP, TIFF, PPTX, PPT |
 | PPT, PPTX | PDF |
 
 Conversion availability depends on the file contents and installed software. Animated GIF → MP4/WEBM is available in the application window.
+
+PDF → TXT extracts text in page order into a UTF-8 TXT file. Scanned PDFs and the original placement of text, tables, and images are not restored.
 
 ## Usage
 

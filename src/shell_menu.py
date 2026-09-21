@@ -22,7 +22,7 @@ def formats_for(extension):
     if extension in IMAGES: formats = PICTURES
     elif extension in AUDIO_INPUTS: formats = AUDIO
     elif extension in MEDIA: formats = VIDEO + ['gif', 'png', 'jpg'] + AUDIO
-    elif extension == 'pdf': formats = ['png', 'jpg', 'webp', 'tiff', 'pptx', 'ppt']
+    elif extension == 'pdf': formats = ['png', 'jpg', 'webp', 'tiff', 'txt', 'pptx', 'ppt']
     elif extension in {'ppt', 'pptx'}: formats = ['pdf']
     else: return []
     normalized = {'jpeg':'jpg', 'tif':'tiff'}.get(extension, extension)
@@ -69,15 +69,16 @@ def enable():
         for ext in EXTENSIONS:
             group = STORE + '\\' + ext
             put(menu_key(ext), {'MUIVerb': 'Simple File Converter',
-                'ExtendedSubCommandsKey': group, 'MultiSelectModel': 'Single',
+                'ExtendedSubCommandsKey': group, 'MultiSelectModel': 'Player',
                 'Icon': '"' + command[0] + '",0'})
             for i, fmt in enumerate(formats_for(ext)):
                 verb = CLASSES + '\\' + group + rf'\shell\{i:02d}_{fmt}'
                 label = tr('{v0}로 변환', v0=fmt.upper())
                 if ext == 'pdf' and fmt in {'ppt','pptx'}: label += tr(' (이미지 슬라이드)')
-                put(verb, {'MUIVerb': label, 'MultiSelectModel': 'Single'})
+                put(verb, {'MUIVerb': label, 'MultiSelectModel': 'Player'})
                 # Explorer substitutes %1. Keep it explicitly quoted, even without spaces.
-                cmd = subprocess.list2cmdline(command + ['--context-convert', fmt]) + ' "%1"'
+                # %* passes every selected item so Explorer can run one batch window.
+                cmd = subprocess.list2cmdline(command + ['--context-convert', fmt]) + ' %*'
                 put(verb + '\\command', {'': cmd})
         put(STATE, {'Command': subprocess.list2cmdline(command)})
         refresh()

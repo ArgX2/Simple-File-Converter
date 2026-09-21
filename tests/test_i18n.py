@@ -66,12 +66,24 @@ class LanguageTests(unittest.TestCase):
         i18n.set_language('ja')
         # Prevent the startup timer; this test checks the result UI independently.
         with patch('quick_convert.QTimer.singleShot'):
-            window = QuickConvert(source, 'jpg', Worker)
+            window = QuickConvert([source], 'jpg', Worker)
         self.addCleanup(window.close)
         window.receive(0, '완료', str(self.root / 'original.jpg'))
         window.finished()
         self.assertEqual(window.title.text(), i18n.tr('변환을 완료했습니다'))
         self.assertEqual(window.timer.interval(), 2500)
+
+    def test_quick_conversion_accepts_multiple_files_and_keeps_source_folders(self):
+        first = self.root / 'one'; second = self.root / 'two'
+        first.mkdir(); second.mkdir()
+        paths = [first / 'one.png', second / 'two.png']
+        for path in paths: Image.new('RGB', (20, 30), 'blue').save(path)
+        worker = Worker([(i, path, 'jpg', None) for i, path in enumerate(paths)], None)
+        results = []
+        worker.result.connect(lambda row, state, result: results.append((row, state, result)))
+        worker.run()
+        self.assertEqual([state for _, state, _ in sorted(results)], ['완료', '완료'])
+        self.assertEqual({Path(result).parent for _, _, result in results}, {first, second})
 
     def test_saved_choice_and_system_default(self):
         with patch('i18n.QLocale') as locale:

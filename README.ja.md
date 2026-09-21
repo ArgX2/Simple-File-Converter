@@ -49,10 +49,12 @@ EXEをダウンロードして起動し、ファイルをドラッグしてく�
 | MP4, AVI, MKV, MOV, WEBM, WMV, M4V, MPG, MPEG | MP4, AVI, MKV, MOV, WEBM, GIF, PNG, JPG、および音声抽出 |
 | MP3, WAV, FLAC, AAC, M4A, OGG, OPUS, WMA | MP3, WAV, FLAC, M4A, OGG, AAC, OPUS |
 | PNG, JPG, JPEG, GIF, WEBP, BMP, TIF, TIFF, ICO | PNG, JPG, WEBP, BMP, TIFF, GIF, PDF |
-| PDF | PNG, JPG, WEBP, TIFF, PPTX, PPT |
+| PDF | TXT, PNG, JPG, WEBP, TIFF, PPTX, PPT |
 | PPT, PPTX | PDF |
 
 実際に変換できるかどうかは、ファイルの内容やインストール済みソフトに依存します。アニメーションGIFからMP4/WEBMへの変換は、アプリ画面で選択できます。
+
+PDF → TXTでは、ページ順にテキストを抽出してUTF-8のTXTファイルに保存します。スキャンPDFや、文字・表・画像の元の配置は復元されません。
 
 ## 使い方
 

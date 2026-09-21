@@ -47,6 +47,17 @@ class EngineTests(unittest.TestCase):
         self.assertEqual(len(deck.slides), 2)
         self.assertEqual(len(deck.slides[0].shapes), 1)
 
+    def test_pdf_to_txt_extracts_pages_in_order(self):
+        pdf = self.root / 'text.pdf'
+        with pymupdf.open() as doc:
+            for i in range(2):
+                page = doc.new_page(width=160, height=120)
+                page.insert_text((20, 50), f'Page {i + 1}')
+            doc.save(pdf)
+        self.assertIn('txt', inspect(pdf)['formats'])
+        text = convert(pdf, 'txt', self.root).read_text(encoding='utf-8')
+        self.assertLess(text.index('Page 1'), text.index('Page 2'))
+
     def test_cancel_leaves_no_partial_output(self):
         cancelled = threading.Event()
         cancelled.set()

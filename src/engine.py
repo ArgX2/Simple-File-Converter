@@ -32,7 +32,7 @@ def inspect(path):
                 raise ValueError(tr('암호가 걸린 PDF입니다. 암호를 해제한 파일을 선택해 주세요.'))
             if not len(doc):
                 raise ValueError(tr('페이지가 없는 PDF입니다.'))
-            return {'kind': 'pdf', 'formats': ['png', 'jpg', 'webp', 'tiff', 'pptx', 'ppt'], 'detail': tr('PDF · {v0}페이지', v0=len(doc))}
+            return {'kind': 'pdf', 'formats': ['png', 'jpg', 'webp', 'tiff', 'txt', 'pptx', 'ppt'], 'detail': tr('PDF · {v0}페이지', v0=len(doc))}
     if ext in IMAGES:
         with Image.open(path) as im:
             im.load()
@@ -117,6 +117,16 @@ def convert(src, fmt, folder, meta=None, cancel=None, progress=lambda text: None
             pdf_to_slides(src, dst, cancel, progress)
         elif meta['kind'] == 'media' or fmt in VIDEO:
             media_convert(src, dst, fmt, cancel)
+        elif meta['kind'] == 'pdf' and fmt == 'txt':
+            with pymupdf.open(src) as doc, dst.open('w', encoding='utf-8', newline='') as text_file:
+                for i, page in enumerate(doc):
+                    check(cancel)
+                    progress(tr('PDF {v0}/{v1}페이지', v0=i + 1, v1=len(doc)))
+                    text = page.get_text('text')
+                    if i:
+                        text_file.write('\n\n')
+                    text_file.write(text.rstrip())
+                    text_file.write('\n')
         elif meta['kind'] == 'pdf':
             dst = stage / (src.stem + '_' + fmt + '_pages')
             dst.mkdir()
