@@ -57,7 +57,7 @@ Translations are bundled in the EXE and work offline. Preferences are saved for 
 
 Conversion availability depends on the file contents and installed software. Animated GIF → MP4/WEBM is available in the application window.
 
-Formats that may not preserve the original perfectly are labeled `Convert to XXX with possible loss` in the application.
+Formats that may not preserve the original perfectly are labeled `Convert to XXX with possible loss` in the application. Quality is not guaranteed for an incomplete conversion; content, formatting, or layout may be missing or may not convert correctly.
 
 ### Conversion status
 

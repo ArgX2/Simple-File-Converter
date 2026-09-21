@@ -57,7 +57,7 @@ Las traducciones están incluidas en el EXE y funcionan sin conexión. La prefer
 
 La disponibilidad de cada conversión depende del contenido del archivo y del software instalado. La conversión de GIF animado a MP4/WEBM se puede seleccionar en la ventana del programa.
 
-Las conversiones que no pueden conservar completamente el original se muestran como `Convertir a XXX de forma incompleta`.
+Las conversiones que no pueden conservar completamente el original se muestran como `Convertir a XXX de forma incompleta`. La calidad no está garantizada en una conversión incompleta; puede faltar parte del contenido, el formato o el diseño, o no convertirse correctamente.
 
 ### Estado de las conversiones
 
