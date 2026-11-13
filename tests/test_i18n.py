@@ -73,6 +73,15 @@ class LanguageTests(unittest.TestCase):
         self.assertEqual(window.title.text(), i18n.tr('변환을 완료했습니다'))
         self.assertEqual(window.timer.interval(), 2500)
 
+    def test_credits_button_shows_component_uses(self):
+        with patch('shell_menu.is_enabled', return_value=False):
+            window = Window()
+        self.addCleanup(window.close)
+        with patch('app.QMessageBox.information') as show:
+            window.credits.click()
+        self.assertIn('rhwp', str(show.call_args))
+        self.assertIn('FFmpeg', str(show.call_args))
+
     def test_saved_choice_and_system_default(self):
         with patch('i18n.QLocale') as locale:
             locale.system.return_value.uiLanguages.return_value = ['ja-JP']

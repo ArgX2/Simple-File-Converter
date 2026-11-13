@@ -12,7 +12,7 @@ STATE = r'Software\SimpleFileConverter'
 MENU = 'SimpleFileConverter'
 STORE = 'SimpleFileConverter.Menus'
 AUDIO_INPUTS = {'mp3', 'wav', 'flac', 'aac', 'm4a', 'ogg', 'opus', 'wma'}
-EXTENSIONS = sorted(IMAGES | MEDIA | {'pdf', 'docx', 'ppt', 'pptx'})
+EXTENSIONS = sorted(IMAGES | MEDIA | {'pdf', 'docx', 'ppt', 'pptx', 'hwp', 'hwpx'})
 
 def launch_command():
     if getattr(sys, 'frozen', False): return [str(Path(sys.executable).resolve())]
@@ -22,7 +22,9 @@ def formats_for(extension):
     if extension in IMAGES: formats = PICTURES
     elif extension in AUDIO_INPUTS: formats = AUDIO
     elif extension in MEDIA: formats = VIDEO + ['gif', 'png', 'jpg'] + AUDIO
-    elif extension == 'pdf': formats = ['png', 'jpg', 'webp', 'tiff', 'pptx', 'ppt', 'docx']
+    elif extension == 'pdf': formats = ['png', 'jpg', 'webp', 'tiff', 'pptx', 'ppt', 'docx', 'hwp', 'hwpx']
+    elif extension == 'hwp': formats = ['hwpx', 'pdf']
+    elif extension == 'hwpx': formats = ['hwp', 'pdf']
     elif extension == 'docx': formats = ['pdf']
     elif extension in {'ppt', 'pptx'}: formats = ['pdf']
     else: return []

@@ -6,6 +6,10 @@ root = Path(SPECPATH).resolve()
 source = root / 'src'
 datas = collect_data_files('imageio_ffmpeg')
 datas += [(str(source / 'sfc.ico'), '.')]
+rhwp = root / 'build' / 'rhwp' / 'rhwp.exe'
+if not rhwp.is_file():
+    raise SystemExit('Run scripts/prepare_rhwp.ps1 before building.')
+datas += [(str(rhwp), 'rhwp')]
 for path in source.iterdir():
     if path.is_file():
         datas.append((str(path), 'source'))

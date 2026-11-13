@@ -5,3 +5,4 @@
 *.spec text eol=lf
 *.ps1 text eol=crlf
 *.ico binary
+*.pdf binary

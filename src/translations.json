@@ -135,7 +135,11 @@
     "영상 + 음성": "Video + audio",
     "영상 · 음성 없음": "Video · no audio",
     "{v0}로 변환": "Convert to {v0}",
-    "{v0}로 불완전 변환": "Convert to {v0} with possible loss"
+    "{v0}로 불완전 변환": "Convert to {v0} with possible loss",
+    "크레딧": "Credits",
+    "오픈소스 사용처:\n\nrhwp — HWP/HWPX와 PDF 변환 (MIT)\nFFmpeg / imageio-ffmpeg — 영상·음성 변환 (FFmpeg 라이선스 / BSD-2-Clause)\nPillow — 이미지 변환 (MIT-CMU)\nPyMuPDF / MuPDF — PDF 처리 (AGPLv3 / 상용)\npython-pptx — PPTX 생성 (MIT)\nlxml / XlsxWriter / typing_extensions — 문서 처리 의존성 (BSD / BSD / PSF)\nPySide6 / Qt / shiboken6 — 사용자 인터페이스 (LGPLv3 / GPLv3 / 상용)\nPython — 실행 환경 (PSF)\n\n상세 고지와 라이선스 전문은 배포본의 licenses 폴더와 THIRD_PARTY.txt를 참고하세요.": "Open-source components and uses:\n\nrhwp — HWP/HWPX and PDF conversion (MIT)\nFFmpeg / imageio-ffmpeg — video and audio conversion (FFmpeg licenses / BSD-2-Clause)\nPillow — image conversion (MIT-CMU)\nPyMuPDF / MuPDF — PDF processing (AGPLv3 / commercial)\npython-pptx — PPTX creation (MIT)\nlxml / XlsxWriter / typing_extensions — document processing dependencies (BSD / BSD / PSF)\nPySide6 / Qt / shiboken6 — user interface (LGPLv3 / GPLv3 / commercial)\nPython — runtime (PSF)\n\nSee the licenses folder and THIRD_PARTY.txt in the distribution for full notices and license text.",
+    "한글 변환 엔진이 없습니다. scripts/prepare_rhwp.ps1을 실행해 주세요.": "The HWP conversion engine is missing. Run scripts/prepare_rhwp.ps1.",
+    "변환 시간이 초과되었습니다.": "Conversion timed out."
   },
   "ja": {
     "표·배치가 달라질 수 있으며 이미지 중심 문서는 텍스트를 편집할 수 없을 수 있습니다. OCR은 지원하지 않습니다.": "表やレイアウトが変わる場合があります。画像中心の文書はテキストを編集できない場合があります。OCRには対応していません。",
@@ -273,7 +277,11 @@
     "영상 + 음성": "動画 + 音声",
     "영상 · 음성 없음": "動画 · 音声なし",
     "{v0}로 변환": "{v0}に変換",
-    "{v0}로 불완전 변환": "{v0}に不完全変換"
+    "{v0}로 불완전 변환": "{v0}に不完全変換",
+    "크레딧": "Credits",
+    "오픈소스 사용처:\n\nrhwp — HWP/HWPX와 PDF 변환 (MIT)\nFFmpeg / imageio-ffmpeg — 영상·음성 변환 (FFmpeg 라이선스 / BSD-2-Clause)\nPillow — 이미지 변환 (MIT-CMU)\nPyMuPDF / MuPDF — PDF 처리 (AGPLv3 / 상용)\npython-pptx — PPTX 생성 (MIT)\nlxml / XlsxWriter / typing_extensions — 문서 처리 의존성 (BSD / BSD / PSF)\nPySide6 / Qt / shiboken6 — 사용자 인터페이스 (LGPLv3 / GPLv3 / 상용)\nPython — 실행 환경 (PSF)\n\n상세 고지와 라이선스 전문은 배포본의 licenses 폴더와 THIRD_PARTY.txt를 참고하세요.": "Open-source components and uses:\n\nrhwp — HWP/HWPX and PDF conversion (MIT)\nFFmpeg / imageio-ffmpeg — video and audio conversion (FFmpeg licenses / BSD-2-Clause)\nPillow — image conversion (MIT-CMU)\nPyMuPDF / MuPDF — PDF processing (AGPLv3 / commercial)\npython-pptx — PPTX creation (MIT)\nlxml / XlsxWriter / typing_extensions — document processing dependencies (BSD / BSD / PSF)\nPySide6 / Qt / shiboken6 — user interface (LGPLv3 / GPLv3 / commercial)\nPython — runtime (PSF)\n\nSee the licenses folder and THIRD_PARTY.txt in the distribution for full notices and license text.",
+    "한글 변환 엔진이 없습니다. scripts/prepare_rhwp.ps1을 실행해 주세요.": "The HWP conversion engine is missing. Run scripts/prepare_rhwp.ps1.",
+    "변환 시간이 초과되었습니다.": "Conversion timed out."
   },
   "zh_CN": {
     "표·배치가 달라질 수 있으며 이미지 중심 문서는 텍스트를 편집할 수 없을 수 있습니다. OCR은 지원하지 않습니다.": "表格和布局可能改变。以图像为主的文档可能没有可编辑文本。不支持OCR。",
@@ -411,7 +419,11 @@
     "영상 + 음성": "视频 + 音频",
     "영상 · 음성 없음": "视频 · 无音频",
     "{v0}로 변환": "转换为 {v0}",
-    "{v0}로 불완전 변환": "不完整转换为 {v0}"
+    "{v0}로 불완전 변환": "不完整转换为 {v0}",
+    "크레딧": "Credits",
+    "오픈소스 사용처:\n\nrhwp — HWP/HWPX와 PDF 변환 (MIT)\nFFmpeg / imageio-ffmpeg — 영상·음성 변환 (FFmpeg 라이선스 / BSD-2-Clause)\nPillow — 이미지 변환 (MIT-CMU)\nPyMuPDF / MuPDF — PDF 처리 (AGPLv3 / 상용)\npython-pptx — PPTX 생성 (MIT)\nlxml / XlsxWriter / typing_extensions — 문서 처리 의존성 (BSD / BSD / PSF)\nPySide6 / Qt / shiboken6 — 사용자 인터페이스 (LGPLv3 / GPLv3 / 상용)\nPython — 실행 환경 (PSF)\n\n상세 고지와 라이선스 전문은 배포본의 licenses 폴더와 THIRD_PARTY.txt를 참고하세요.": "Open-source components and uses:\n\nrhwp — HWP/HWPX and PDF conversion (MIT)\nFFmpeg / imageio-ffmpeg — video and audio conversion (FFmpeg licenses / BSD-2-Clause)\nPillow — image conversion (MIT-CMU)\nPyMuPDF / MuPDF — PDF processing (AGPLv3 / commercial)\npython-pptx — PPTX creation (MIT)\nlxml / XlsxWriter / typing_extensions — document processing dependencies (BSD / BSD / PSF)\nPySide6 / Qt / shiboken6 — user interface (LGPLv3 / GPLv3 / commercial)\nPython — runtime (PSF)\n\nSee the licenses folder and THIRD_PARTY.txt in the distribution for full notices and license text.",
+    "한글 변환 엔진이 없습니다. scripts/prepare_rhwp.ps1을 실행해 주세요.": "The HWP conversion engine is missing. Run scripts/prepare_rhwp.ps1.",
+    "변환 시간이 초과되었습니다.": "Conversion timed out."
   },
   "zh_TW": {
     "표·배치가 달라질 수 있으며 이미지 중심 문서는 텍스트를 편집할 수 없을 수 있습니다. OCR은 지원하지 않습니다.": "表格與版面可能改變。以影像為主的文件可能沒有可編輯文字。不支援OCR。",
@@ -549,7 +561,11 @@
     "영상 + 음성": "影片 + 音訊",
     "영상 · 음성 없음": "影片 · 無音訊",
     "{v0}로 변환": "轉換為 {v0}",
-    "{v0}로 불완전 변환": "不完整轉換為 {v0}"
+    "{v0}로 불완전 변환": "不完整轉換為 {v0}",
+    "크레딧": "Credits",
+    "오픈소스 사용처:\n\nrhwp — HWP/HWPX와 PDF 변환 (MIT)\nFFmpeg / imageio-ffmpeg — 영상·음성 변환 (FFmpeg 라이선스 / BSD-2-Clause)\nPillow — 이미지 변환 (MIT-CMU)\nPyMuPDF / MuPDF — PDF 처리 (AGPLv3 / 상용)\npython-pptx — PPTX 생성 (MIT)\nlxml / XlsxWriter / typing_extensions — 문서 처리 의존성 (BSD / BSD / PSF)\nPySide6 / Qt / shiboken6 — 사용자 인터페이스 (LGPLv3 / GPLv3 / 상용)\nPython — 실행 환경 (PSF)\n\n상세 고지와 라이선스 전문은 배포본의 licenses 폴더와 THIRD_PARTY.txt를 참고하세요.": "Open-source components and uses:\n\nrhwp — HWP/HWPX and PDF conversion (MIT)\nFFmpeg / imageio-ffmpeg — video and audio conversion (FFmpeg licenses / BSD-2-Clause)\nPillow — image conversion (MIT-CMU)\nPyMuPDF / MuPDF — PDF processing (AGPLv3 / commercial)\npython-pptx — PPTX creation (MIT)\nlxml / XlsxWriter / typing_extensions — document processing dependencies (BSD / BSD / PSF)\nPySide6 / Qt / shiboken6 — user interface (LGPLv3 / GPLv3 / commercial)\nPython — runtime (PSF)\n\nSee the licenses folder and THIRD_PARTY.txt in the distribution for full notices and license text.",
+    "한글 변환 엔진이 없습니다. scripts/prepare_rhwp.ps1을 실행해 주세요.": "The HWP conversion engine is missing. Run scripts/prepare_rhwp.ps1.",
+    "변환 시간이 초과되었습니다.": "Conversion timed out."
   },
   "de": {
     "표·배치가 달라질 수 있으며 이미지 중심 문서는 텍스트를 편집할 수 없을 수 있습니다. OCR은 지원하지 않습니다.": "Tabellen und Layout können sich ändern. Bildbasierte Dokumente enthalten möglicherweise keinen bearbeitbaren Text. OCR wird nicht unterstützt.",
@@ -687,7 +703,11 @@
     "영상 + 음성": "Video + Audio",
     "영상 · 음성 없음": "Video · kein Audio",
     "{v0}로 변환": "In {v0} konvertieren",
-    "{v0}로 불완전 변환": "Unvollständig in {v0} konvertieren"
+    "{v0}로 불완전 변환": "Unvollständig in {v0} konvertieren",
+    "크레딧": "Credits",
+    "오픈소스 사용처:\n\nrhwp — HWP/HWPX와 PDF 변환 (MIT)\nFFmpeg / imageio-ffmpeg — 영상·음성 변환 (FFmpeg 라이선스 / BSD-2-Clause)\nPillow — 이미지 변환 (MIT-CMU)\nPyMuPDF / MuPDF — PDF 처리 (AGPLv3 / 상용)\npython-pptx — PPTX 생성 (MIT)\nlxml / XlsxWriter / typing_extensions — 문서 처리 의존성 (BSD / BSD / PSF)\nPySide6 / Qt / shiboken6 — 사용자 인터페이스 (LGPLv3 / GPLv3 / 상용)\nPython — 실행 환경 (PSF)\n\n상세 고지와 라이선스 전문은 배포본의 licenses 폴더와 THIRD_PARTY.txt를 참고하세요.": "Open-source components and uses:\n\nrhwp — HWP/HWPX and PDF conversion (MIT)\nFFmpeg / imageio-ffmpeg — video and audio conversion (FFmpeg licenses / BSD-2-Clause)\nPillow — image conversion (MIT-CMU)\nPyMuPDF / MuPDF — PDF processing (AGPLv3 / commercial)\npython-pptx — PPTX creation (MIT)\nlxml / XlsxWriter / typing_extensions — document processing dependencies (BSD / BSD / PSF)\nPySide6 / Qt / shiboken6 — user interface (LGPLv3 / GPLv3 / commercial)\nPython — runtime (PSF)\n\nSee the licenses folder and THIRD_PARTY.txt in the distribution for full notices and license text.",
+    "한글 변환 엔진이 없습니다. scripts/prepare_rhwp.ps1을 실행해 주세요.": "The HWP conversion engine is missing. Run scripts/prepare_rhwp.ps1.",
+    "변환 시간이 초과되었습니다.": "Conversion timed out."
   },
   "fr": {
     "표·배치가 달라질 수 있으며 이미지 중심 문서는 텍스트를 편집할 수 없을 수 있습니다. OCR은 지원하지 않습니다.": "Les tableaux et la mise en page peuvent changer. Les documents à base d’images peuvent ne pas contenir de texte modifiable. La reconnaissance OCR n’est pas prise en charge.",
@@ -825,7 +845,11 @@
     "영상 + 음성": "Vidéo + Audio",
     "영상 · 음성 없음": "Vidéo · sans audio",
     "{v0}로 변환": "Convertir en {v0}",
-    "{v0}로 불완전 변환": "Convertir en {v0} avec des pertes possibles"
+    "{v0}로 불완전 변환": "Convertir en {v0} avec des pertes possibles",
+    "크레딧": "Credits",
+    "오픈소스 사용처:\n\nrhwp — HWP/HWPX와 PDF 변환 (MIT)\nFFmpeg / imageio-ffmpeg — 영상·음성 변환 (FFmpeg 라이선스 / BSD-2-Clause)\nPillow — 이미지 변환 (MIT-CMU)\nPyMuPDF / MuPDF — PDF 처리 (AGPLv3 / 상용)\npython-pptx — PPTX 생성 (MIT)\nlxml / XlsxWriter / typing_extensions — 문서 처리 의존성 (BSD / BSD / PSF)\nPySide6 / Qt / shiboken6 — 사용자 인터페이스 (LGPLv3 / GPLv3 / 상용)\nPython — 실행 환경 (PSF)\n\n상세 고지와 라이선스 전문은 배포본의 licenses 폴더와 THIRD_PARTY.txt를 참고하세요.": "Open-source components and uses:\n\nrhwp — HWP/HWPX and PDF conversion (MIT)\nFFmpeg / imageio-ffmpeg — video and audio conversion (FFmpeg licenses / BSD-2-Clause)\nPillow — image conversion (MIT-CMU)\nPyMuPDF / MuPDF — PDF processing (AGPLv3 / commercial)\npython-pptx — PPTX creation (MIT)\nlxml / XlsxWriter / typing_extensions — document processing dependencies (BSD / BSD / PSF)\nPySide6 / Qt / shiboken6 — user interface (LGPLv3 / GPLv3 / commercial)\nPython — runtime (PSF)\n\nSee the licenses folder and THIRD_PARTY.txt in the distribution for full notices and license text.",
+    "한글 변환 엔진이 없습니다. scripts/prepare_rhwp.ps1을 실행해 주세요.": "The HWP conversion engine is missing. Run scripts/prepare_rhwp.ps1.",
+    "변환 시간이 초과되었습니다.": "Conversion timed out."
   },
   "es": {
     "표·배치가 달라질 수 있으며 이미지 중심 문서는 텍스트를 편집할 수 없을 수 있습니다. OCR은 지원하지 않습니다.": "Las tablas y el diseño pueden cambiar. Los documentos basados en imágenes pueden no contener texto editable. No se admite OCR.",
@@ -963,7 +987,11 @@
     "영상 + 음성": "Vídeo + Audio",
     "영상 · 음성 없음": "Vídeo · sin audio",
     "{v0}로 변환": "Convertir a {v0}",
-    "{v0}로 불완전 변환": "Convertir a {v0} de forma incompleta"
+    "{v0}로 불완전 변환": "Convertir a {v0} de forma incompleta",
+    "크레딧": "Credits",
+    "오픈소스 사용처:\n\nrhwp — HWP/HWPX와 PDF 변환 (MIT)\nFFmpeg / imageio-ffmpeg — 영상·음성 변환 (FFmpeg 라이선스 / BSD-2-Clause)\nPillow — 이미지 변환 (MIT-CMU)\nPyMuPDF / MuPDF — PDF 처리 (AGPLv3 / 상용)\npython-pptx — PPTX 생성 (MIT)\nlxml / XlsxWriter / typing_extensions — 문서 처리 의존성 (BSD / BSD / PSF)\nPySide6 / Qt / shiboken6 — 사용자 인터페이스 (LGPLv3 / GPLv3 / 상용)\nPython — 실행 환경 (PSF)\n\n상세 고지와 라이선스 전문은 배포본의 licenses 폴더와 THIRD_PARTY.txt를 참고하세요.": "Open-source components and uses:\n\nrhwp — HWP/HWPX and PDF conversion (MIT)\nFFmpeg / imageio-ffmpeg — video and audio conversion (FFmpeg licenses / BSD-2-Clause)\nPillow — image conversion (MIT-CMU)\nPyMuPDF / MuPDF — PDF processing (AGPLv3 / commercial)\npython-pptx — PPTX creation (MIT)\nlxml / XlsxWriter / typing_extensions — document processing dependencies (BSD / BSD / PSF)\nPySide6 / Qt / shiboken6 — user interface (LGPLv3 / GPLv3 / commercial)\nPython — runtime (PSF)\n\nSee the licenses folder and THIRD_PARTY.txt in the distribution for full notices and license text.",
+    "한글 변환 엔진이 없습니다. scripts/prepare_rhwp.ps1을 실행해 주세요.": "The HWP conversion engine is missing. Run scripts/prepare_rhwp.ps1.",
+    "변환 시간이 초과되었습니다.": "Conversion timed out."
   },
   "pt": {
     "표·배치가 달라질 수 있으며 이미지 중심 문서는 텍스트를 편집할 수 없을 수 있습니다. OCR은 지원하지 않습니다.": "As tabelas e o layout podem mudar. Documentos baseados em imagens podem não conter texto editável. OCR não é suportado.",
@@ -1101,7 +1129,11 @@
     "영상 + 음성": "Vídeo + Áudio",
     "영상 · 음성 없음": "Vídeo · sem áudio",
     "{v0}로 변환": "Converter para {v0}",
-    "{v0}로 불완전 변환": "Converter para {v0} de forma incompleta"
+    "{v0}로 불완전 변환": "Converter para {v0} de forma incompleta",
+    "크레딧": "Credits",
+    "오픈소스 사용처:\n\nrhwp — HWP/HWPX와 PDF 변환 (MIT)\nFFmpeg / imageio-ffmpeg — 영상·음성 변환 (FFmpeg 라이선스 / BSD-2-Clause)\nPillow — 이미지 변환 (MIT-CMU)\nPyMuPDF / MuPDF — PDF 처리 (AGPLv3 / 상용)\npython-pptx — PPTX 생성 (MIT)\nlxml / XlsxWriter / typing_extensions — 문서 처리 의존성 (BSD / BSD / PSF)\nPySide6 / Qt / shiboken6 — 사용자 인터페이스 (LGPLv3 / GPLv3 / 상용)\nPython — 실행 환경 (PSF)\n\n상세 고지와 라이선스 전문은 배포본의 licenses 폴더와 THIRD_PARTY.txt를 참고하세요.": "Open-source components and uses:\n\nrhwp — HWP/HWPX and PDF conversion (MIT)\nFFmpeg / imageio-ffmpeg — video and audio conversion (FFmpeg licenses / BSD-2-Clause)\nPillow — image conversion (MIT-CMU)\nPyMuPDF / MuPDF — PDF processing (AGPLv3 / commercial)\npython-pptx — PPTX creation (MIT)\nlxml / XlsxWriter / typing_extensions — document processing dependencies (BSD / BSD / PSF)\nPySide6 / Qt / shiboken6 — user interface (LGPLv3 / GPLv3 / commercial)\nPython — runtime (PSF)\n\nSee the licenses folder and THIRD_PARTY.txt in the distribution for full notices and license text.",
+    "한글 변환 엔진이 없습니다. scripts/prepare_rhwp.ps1을 실행해 주세요.": "The HWP conversion engine is missing. Run scripts/prepare_rhwp.ps1.",
+    "변환 시간이 초과되었습니다.": "Conversion timed out."
   },
   "it": {
     "표·배치가 달라질 수 있으며 이미지 중심 문서는 텍스트를 편집할 수 없을 수 있습니다. OCR은 지원하지 않습니다.": "Tabelle e impaginazione possono cambiare. I documenti basati su immagini potrebbero non contenere testo modificabile. OCR non è supportato.",
@@ -1239,7 +1271,11 @@
     "영상 + 음성": "Video + Audio",
     "영상 · 음성 없음": "Video · senza audio",
     "{v0}로 변환": "Converti in {v0}",
-    "{v0}로 불완전 변환": "Conversione incompleta in {v0}"
+    "{v0}로 불완전 변환": "Conversione incompleta in {v0}",
+    "크레딧": "Credits",
+    "오픈소스 사용처:\n\nrhwp — HWP/HWPX와 PDF 변환 (MIT)\nFFmpeg / imageio-ffmpeg — 영상·음성 변환 (FFmpeg 라이선스 / BSD-2-Clause)\nPillow — 이미지 변환 (MIT-CMU)\nPyMuPDF / MuPDF — PDF 처리 (AGPLv3 / 상용)\npython-pptx — PPTX 생성 (MIT)\nlxml / XlsxWriter / typing_extensions — 문서 처리 의존성 (BSD / BSD / PSF)\nPySide6 / Qt / shiboken6 — 사용자 인터페이스 (LGPLv3 / GPLv3 / 상용)\nPython — 실행 환경 (PSF)\n\n상세 고지와 라이선스 전문은 배포본의 licenses 폴더와 THIRD_PARTY.txt를 참고하세요.": "Open-source components and uses:\n\nrhwp — HWP/HWPX and PDF conversion (MIT)\nFFmpeg / imageio-ffmpeg — video and audio conversion (FFmpeg licenses / BSD-2-Clause)\nPillow — image conversion (MIT-CMU)\nPyMuPDF / MuPDF — PDF processing (AGPLv3 / commercial)\npython-pptx — PPTX creation (MIT)\nlxml / XlsxWriter / typing_extensions — document processing dependencies (BSD / BSD / PSF)\nPySide6 / Qt / shiboken6 — user interface (LGPLv3 / GPLv3 / commercial)\nPython — runtime (PSF)\n\nSee the licenses folder and THIRD_PARTY.txt in the distribution for full notices and license text.",
+    "한글 변환 엔진이 없습니다. scripts/prepare_rhwp.ps1을 실행해 주세요.": "The HWP conversion engine is missing. Run scripts/prepare_rhwp.ps1.",
+    "변환 시간이 초과되었습니다.": "Conversion timed out."
   },
   "ru": {
     "표·배치가 달라질 수 있으며 이미지 중심 문서는 텍스트를 편집할 수 없을 수 있습니다. OCR은 지원하지 않습니다.": "Таблицы и расположение элементов могут измениться. Документы на основе изображений могут не содержать редактируемого текста. OCR не поддерживается.",
@@ -1377,7 +1413,11 @@
     "영상 + 음성": "Видео + Аудио",
     "영상 · 음성 없음": "Видео · без звука",
     "{v0}로 변환": "Преобразовать в {v0}",
-    "{v0}로 불완전 변환": "Неполное преобразование в {v0}"
+    "{v0}로 불완전 변환": "Неполное преобразование в {v0}",
+    "크레딧": "Credits",
+    "오픈소스 사용처:\n\nrhwp — HWP/HWPX와 PDF 변환 (MIT)\nFFmpeg / imageio-ffmpeg — 영상·음성 변환 (FFmpeg 라이선스 / BSD-2-Clause)\nPillow — 이미지 변환 (MIT-CMU)\nPyMuPDF / MuPDF — PDF 처리 (AGPLv3 / 상용)\npython-pptx — PPTX 생성 (MIT)\nlxml / XlsxWriter / typing_extensions — 문서 처리 의존성 (BSD / BSD / PSF)\nPySide6 / Qt / shiboken6 — 사용자 인터페이스 (LGPLv3 / GPLv3 / 상용)\nPython — 실행 환경 (PSF)\n\n상세 고지와 라이선스 전문은 배포본의 licenses 폴더와 THIRD_PARTY.txt를 참고하세요.": "Open-source components and uses:\n\nrhwp — HWP/HWPX and PDF conversion (MIT)\nFFmpeg / imageio-ffmpeg — video and audio conversion (FFmpeg licenses / BSD-2-Clause)\nPillow — image conversion (MIT-CMU)\nPyMuPDF / MuPDF — PDF processing (AGPLv3 / commercial)\npython-pptx — PPTX creation (MIT)\nlxml / XlsxWriter / typing_extensions — document processing dependencies (BSD / BSD / PSF)\nPySide6 / Qt / shiboken6 — user interface (LGPLv3 / GPLv3 / commercial)\nPython — runtime (PSF)\n\nSee the licenses folder and THIRD_PARTY.txt in the distribution for full notices and license text.",
+    "한글 변환 엔진이 없습니다. scripts/prepare_rhwp.ps1을 실행해 주세요.": "The HWP conversion engine is missing. Run scripts/prepare_rhwp.ps1.",
+    "변환 시간이 초과되었습니다.": "Conversion timed out."
   },
   "vi": {
     "표·배치가 달라질 수 있으며 이미지 중심 문서는 텍스트를 편집할 수 없을 수 있습니다. OCR은 지원하지 않습니다.": "Bảng và bố cục có thể thay đổi. Tài liệu dạng hình ảnh có thể không có văn bản chỉnh sửa được. Không hỗ trợ OCR.",
@@ -1515,7 +1555,11 @@
     "영상 + 음성": "Video + Âm thanh",
     "영상 · 음성 없음": "Video · không có âm thanh",
     "{v0}로 변환": "Chuyển sang {v0}",
-    "{v0}로 불완전 변환": "Chuyển sang {v0} không hoàn chỉnh"
+    "{v0}로 불완전 변환": "Chuyển sang {v0} không hoàn chỉnh",
+    "크레딧": "Credits",
+    "오픈소스 사용처:\n\nrhwp — HWP/HWPX와 PDF 변환 (MIT)\nFFmpeg / imageio-ffmpeg — 영상·음성 변환 (FFmpeg 라이선스 / BSD-2-Clause)\nPillow — 이미지 변환 (MIT-CMU)\nPyMuPDF / MuPDF — PDF 처리 (AGPLv3 / 상용)\npython-pptx — PPTX 생성 (MIT)\nlxml / XlsxWriter / typing_extensions — 문서 처리 의존성 (BSD / BSD / PSF)\nPySide6 / Qt / shiboken6 — 사용자 인터페이스 (LGPLv3 / GPLv3 / 상용)\nPython — 실행 환경 (PSF)\n\n상세 고지와 라이선스 전문은 배포본의 licenses 폴더와 THIRD_PARTY.txt를 참고하세요.": "Open-source components and uses:\n\nrhwp — HWP/HWPX and PDF conversion (MIT)\nFFmpeg / imageio-ffmpeg — video and audio conversion (FFmpeg licenses / BSD-2-Clause)\nPillow — image conversion (MIT-CMU)\nPyMuPDF / MuPDF — PDF processing (AGPLv3 / commercial)\npython-pptx — PPTX creation (MIT)\nlxml / XlsxWriter / typing_extensions — document processing dependencies (BSD / BSD / PSF)\nPySide6 / Qt / shiboken6 — user interface (LGPLv3 / GPLv3 / commercial)\nPython — runtime (PSF)\n\nSee the licenses folder and THIRD_PARTY.txt in the distribution for full notices and license text.",
+    "한글 변환 엔진이 없습니다. scripts/prepare_rhwp.ps1을 실행해 주세요.": "The HWP conversion engine is missing. Run scripts/prepare_rhwp.ps1.",
+    "변환 시간이 초과되었습니다.": "Conversion timed out."
   },
   "th": {
     "표·배치가 달라질 수 있으며 이미지 중심 문서는 텍스트를 편집할 수 없을 수 있습니다. OCR은 지원하지 않습니다.": "ตารางและเค้าโครงอาจเปลี่ยนไป เอกสารที่เป็นภาพอาจไม่มีข้อความที่แก้ไขได้ ไม่รองรับ OCR",
@@ -1653,7 +1697,11 @@
     "영상 + 음성": "วิดีโอ + เสียง",
     "영상 · 음성 없음": "วิดีโอ · ไม่มีเสียง",
     "{v0}로 변환": "แปลงเป็น {v0}",
-    "{v0}로 불완전 변환": "แปลงเป็น {v0} แบบไม่สมบูรณ์"
+    "{v0}로 불완전 변환": "แปลงเป็น {v0} แบบไม่สมบูรณ์",
+    "크레딧": "Credits",
+    "오픈소스 사용처:\n\nrhwp — HWP/HWPX와 PDF 변환 (MIT)\nFFmpeg / imageio-ffmpeg — 영상·음성 변환 (FFmpeg 라이선스 / BSD-2-Clause)\nPillow — 이미지 변환 (MIT-CMU)\nPyMuPDF / MuPDF — PDF 처리 (AGPLv3 / 상용)\npython-pptx — PPTX 생성 (MIT)\nlxml / XlsxWriter / typing_extensions — 문서 처리 의존성 (BSD / BSD / PSF)\nPySide6 / Qt / shiboken6 — 사용자 인터페이스 (LGPLv3 / GPLv3 / 상용)\nPython — 실행 환경 (PSF)\n\n상세 고지와 라이선스 전문은 배포본의 licenses 폴더와 THIRD_PARTY.txt를 참고하세요.": "Open-source components and uses:\n\nrhwp — HWP/HWPX and PDF conversion (MIT)\nFFmpeg / imageio-ffmpeg — video and audio conversion (FFmpeg licenses / BSD-2-Clause)\nPillow — image conversion (MIT-CMU)\nPyMuPDF / MuPDF — PDF processing (AGPLv3 / commercial)\npython-pptx — PPTX creation (MIT)\nlxml / XlsxWriter / typing_extensions — document processing dependencies (BSD / BSD / PSF)\nPySide6 / Qt / shiboken6 — user interface (LGPLv3 / GPLv3 / commercial)\nPython — runtime (PSF)\n\nSee the licenses folder and THIRD_PARTY.txt in the distribution for full notices and license text.",
+    "한글 변환 엔진이 없습니다. scripts/prepare_rhwp.ps1을 실행해 주세요.": "The HWP conversion engine is missing. Run scripts/prepare_rhwp.ps1.",
+    "변환 시간이 초과되었습니다.": "Conversion timed out."
   },
   "id": {
     "표·배치가 달라질 수 있으며 이미지 중심 문서는 텍스트를 편집할 수 없을 수 있습니다. OCR은 지원하지 않습니다.": "Tabel dan tata letak dapat berubah. Dokumen berbasis gambar mungkin tidak memiliki teks yang dapat diedit. OCR tidak didukung.",
@@ -1791,7 +1839,11 @@
     "영상 + 음성": "Video + Audio",
     "영상 · 음성 없음": "Video · tanpa audio",
     "{v0}로 변환": "Konversi ke {v0}",
-    "{v0}로 불완전 변환": "Konversi ke {v0} secara tidak sempurna"
+    "{v0}로 불완전 변환": "Konversi ke {v0} secara tidak sempurna",
+    "크레딧": "Credits",
+    "오픈소스 사용처:\n\nrhwp — HWP/HWPX와 PDF 변환 (MIT)\nFFmpeg / imageio-ffmpeg — 영상·음성 변환 (FFmpeg 라이선스 / BSD-2-Clause)\nPillow — 이미지 변환 (MIT-CMU)\nPyMuPDF / MuPDF — PDF 처리 (AGPLv3 / 상용)\npython-pptx — PPTX 생성 (MIT)\nlxml / XlsxWriter / typing_extensions — 문서 처리 의존성 (BSD / BSD / PSF)\nPySide6 / Qt / shiboken6 — 사용자 인터페이스 (LGPLv3 / GPLv3 / 상용)\nPython — 실행 환경 (PSF)\n\n상세 고지와 라이선스 전문은 배포본의 licenses 폴더와 THIRD_PARTY.txt를 참고하세요.": "Open-source components and uses:\n\nrhwp — HWP/HWPX and PDF conversion (MIT)\nFFmpeg / imageio-ffmpeg — video and audio conversion (FFmpeg licenses / BSD-2-Clause)\nPillow — image conversion (MIT-CMU)\nPyMuPDF / MuPDF — PDF processing (AGPLv3 / commercial)\npython-pptx — PPTX creation (MIT)\nlxml / XlsxWriter / typing_extensions — document processing dependencies (BSD / BSD / PSF)\nPySide6 / Qt / shiboken6 — user interface (LGPLv3 / GPLv3 / commercial)\nPython — runtime (PSF)\n\nSee the licenses folder and THIRD_PARTY.txt in the distribution for full notices and license text.",
+    "한글 변환 엔진이 없습니다. scripts/prepare_rhwp.ps1을 실행해 주세요.": "The HWP conversion engine is missing. Run scripts/prepare_rhwp.ps1.",
+    "변환 시간이 초과되었습니다.": "Conversion timed out."
   },
   "ar": {
     "표·배치가 달라질 수 있으며 이미지 중심 문서는 텍스트를 편집할 수 없을 수 있습니다. OCR은 지원하지 않습니다.": "قد تتغير الجداول والتخطيط. قد لا تحتوي المستندات القائمة على الصور على نص قابل للتحرير. التعرف الضوئي على النصوص غير مدعوم.",
@@ -1928,8 +1980,12 @@
     "취소하고 있습니다": "جارٍ الإلغاء…",
     "영상 + 음성": "فيديو + صوت",
     "영상 · 음성 없음": "فيديو · بلا صوت",
-      "{v0}로 변환": "تحويل إلى {v0}",
-      "{v0}로 불완전 변환": "تحويل غير مكتمل إلى {v0}"
+    "{v0}로 변환": "تحويل إلى {v0}",
+    "{v0}로 불완전 변환": "تحويل غير مكتمل إلى {v0}",
+    "크레딧": "Credits",
+    "오픈소스 사용처:\n\nrhwp — HWP/HWPX와 PDF 변환 (MIT)\nFFmpeg / imageio-ffmpeg — 영상·음성 변환 (FFmpeg 라이선스 / BSD-2-Clause)\nPillow — 이미지 변환 (MIT-CMU)\nPyMuPDF / MuPDF — PDF 처리 (AGPLv3 / 상용)\npython-pptx — PPTX 생성 (MIT)\nlxml / XlsxWriter / typing_extensions — 문서 처리 의존성 (BSD / BSD / PSF)\nPySide6 / Qt / shiboken6 — 사용자 인터페이스 (LGPLv3 / GPLv3 / 상용)\nPython — 실행 환경 (PSF)\n\n상세 고지와 라이선스 전문은 배포본의 licenses 폴더와 THIRD_PARTY.txt를 참고하세요.": "Open-source components and uses:\n\nrhwp — HWP/HWPX and PDF conversion (MIT)\nFFmpeg / imageio-ffmpeg — video and audio conversion (FFmpeg licenses / BSD-2-Clause)\nPillow — image conversion (MIT-CMU)\nPyMuPDF / MuPDF — PDF processing (AGPLv3 / commercial)\npython-pptx — PPTX creation (MIT)\nlxml / XlsxWriter / typing_extensions — document processing dependencies (BSD / BSD / PSF)\nPySide6 / Qt / shiboken6 — user interface (LGPLv3 / GPLv3 / commercial)\nPython — runtime (PSF)\n\nSee the licenses folder and THIRD_PARTY.txt in the distribution for full notices and license text.",
+    "한글 변환 엔진이 없습니다. scripts/prepare_rhwp.ps1을 실행해 주세요.": "The HWP conversion engine is missing. Run scripts/prepare_rhwp.ps1.",
+    "변환 시간이 초과되었습니다.": "Conversion timed out."
   },
   "he": {
     "표·배치가 달라질 수 있으며 이미지 중심 문서는 텍스트를 편집할 수 없을 수 있습니다. OCR은 지원하지 않습니다.": "הטבלאות והפריסה עשויות להשתנות. ייתכן שמסמכים המבוססים על תמונות לא יכילו טקסט הניתן לעריכה. אין תמיכה ב-OCR.",
@@ -2067,6 +2123,10 @@
     "영상 + 음성": "וידאו + שמע",
     "영상 · 음성 없음": "וידאו · ללא שמע",
     "{v0}로 변환": "המרה ל־{v0}",
-    "{v0}로 불완전 변환": "המרה חלקית ל־{v0}"
+    "{v0}로 불완전 변환": "המרה חלקית ל־{v0}",
+    "크레딧": "Credits",
+    "오픈소스 사용처:\n\nrhwp — HWP/HWPX와 PDF 변환 (MIT)\nFFmpeg / imageio-ffmpeg — 영상·음성 변환 (FFmpeg 라이선스 / BSD-2-Clause)\nPillow — 이미지 변환 (MIT-CMU)\nPyMuPDF / MuPDF — PDF 처리 (AGPLv3 / 상용)\npython-pptx — PPTX 생성 (MIT)\nlxml / XlsxWriter / typing_extensions — 문서 처리 의존성 (BSD / BSD / PSF)\nPySide6 / Qt / shiboken6 — 사용자 인터페이스 (LGPLv3 / GPLv3 / 상용)\nPython — 실행 환경 (PSF)\n\n상세 고지와 라이선스 전문은 배포본의 licenses 폴더와 THIRD_PARTY.txt를 참고하세요.": "Open-source components and uses:\n\nrhwp — HWP/HWPX and PDF conversion (MIT)\nFFmpeg / imageio-ffmpeg — video and audio conversion (FFmpeg licenses / BSD-2-Clause)\nPillow — image conversion (MIT-CMU)\nPyMuPDF / MuPDF — PDF processing (AGPLv3 / commercial)\npython-pptx — PPTX creation (MIT)\nlxml / XlsxWriter / typing_extensions — document processing dependencies (BSD / BSD / PSF)\nPySide6 / Qt / shiboken6 — user interface (LGPLv3 / GPLv3 / commercial)\nPython — runtime (PSF)\n\nSee the licenses folder and THIRD_PARTY.txt in the distribution for full notices and license text.",
+    "한글 변환 엔진이 없습니다. scripts/prepare_rhwp.ps1을 실행해 주세요.": "The HWP conversion engine is missing. Run scripts/prepare_rhwp.ps1.",
+    "변환 시간이 초과되었습니다.": "Conversion timed out."
   }
 }

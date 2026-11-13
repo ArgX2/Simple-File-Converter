@@ -2,7 +2,7 @@
 
 [한국어](README.md) | [English](README.en.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | **Español**
 
-Conversor de archivos para Windows. Versión actual: `v1.1.0`. Arrastra o selecciona archivos, elige el formato de salida y conviértelos. También puedes convertir un solo archivo desde el menú contextual del Explorador. Consulta el [historial de cambios](CHANGELOG.md).
+Conversor de archivos para Windows. Versión actual: `v1.2.0`. Arrastra o selecciona archivos, elige el formato de salida y conviértelos. También puedes convertir un solo archivo desde el menú contextual del Explorador. Consulta el [historial de cambios](CHANGELOG.md).
 
 ## Descargas
 

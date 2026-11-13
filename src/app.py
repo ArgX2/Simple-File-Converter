@@ -141,6 +141,9 @@ class Window(QMainWindow):
         self.language_picker.currentIndexChanged.connect(self.change_language)
         footer.addWidget(self.language_picker)
         footer.addStretch()
+        self.credits = QPushButton(tr('크레딧'))
+        self.credits.clicked.connect(self.show_credits)
+        footer.addWidget(self.credits)
         self.version = QLabel(f'v{VERSION}')
         self.version.setObjectName('version')
         footer.addWidget(self.version)
@@ -161,6 +164,8 @@ class Window(QMainWindow):
 
     def notify(self, title, message, kind='info', details=''):
         self.toasts.show(title, message, kind, details)
+    def show_credits(self):
+        QMessageBox.information(self, tr('크레딧'), tr('오픈소스 사용처:\n\nrhwp — HWP/HWPX와 PDF 변환 (MIT)\nFFmpeg / imageio-ffmpeg — 영상·음성 변환 (FFmpeg 라이선스 / BSD-2-Clause)\nPillow — 이미지 변환 (MIT-CMU)\nPyMuPDF / MuPDF — PDF 처리 (AGPLv3 / 상용)\npython-pptx — PPTX 생성 (MIT)\nlxml / XlsxWriter / typing_extensions — 문서 처리 의존성 (BSD / BSD / PSF)\nPySide6 / Qt / shiboken6 — 사용자 인터페이스 (LGPLv3 / GPLv3 / 상용)\nPython — 실행 환경 (PSF)\n\n상세 고지와 라이선스 전문은 배포본의 licenses 폴더와 THIRD_PARTY.txt를 참고하세요.'))
     def change_language(self):
         previous = selection()
         try:
@@ -256,7 +261,7 @@ class Window(QMainWindow):
         self.add_files([u.toLocalFile() for u in event.mimeData().urls() if u.isLocalFile()])
         event.acceptProposedAction()
     def choose_files(self):
-        patterns = ' '.join('*.' + e for e in sorted(IMAGES | MEDIA | {'pdf', 'docx', 'ppt', 'pptx'}))
+        patterns = ' '.join('*.' + e for e in sorted(IMAGES | MEDIA | {'pdf', 'docx', 'ppt', 'pptx', 'hwp', 'hwpx'}))
         paths, _ = QFileDialog.getOpenFileNames(self, tr('변환할 파일 선택'), '', tr('지원 파일 ({v0});;모든 파일 (*)', v0=patterns))
         self.add_files(paths)
     def add_files(self, paths):

@@ -85,6 +85,14 @@ def run(folder):
                 from pptx import Presentation
                 assert len(Presentation(slides).slides) == 1
                 checks.append('pdf->pptx')
+                for extension in ('hwp', 'hwpx'):
+                    document = convert(result, extension, folder / 'converted')
+                    checks.append('pdf->' + extension)
+                    assert convert(document, 'pdf', folder / 'converted').is_file()
+                    checks.append(extension + '->pdf')
+                    other = 'hwpx' if extension == 'hwp' else 'hwp'
+                    assert convert(document, other, folder / 'converted').is_file()
+                    checks.append(extension + '->' + other)
         movie = folder / 'sample.mp4'
         run_ffmpeg(['-f', 'lavfi', '-i', 'color=c=blue:size=64x48:rate=12:duration=0.5', '-f', 'lavfi', '-i', 'sine=frequency=440:duration=0.5', '-c:v', 'libx264', '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-shortest', str(movie)], threading.Event())
         assert 'mp3' in inspect(movie)['formats']

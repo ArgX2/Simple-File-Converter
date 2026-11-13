@@ -2,7 +2,7 @@
 
 [한국어](README.md) | **English** | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [Español](README.es.md)
 
-A file converter for Windows. Current version: `v1.1.0`. Drop or select files, choose an output format, and convert. You can also convert a single file from the File Explorer context menu. See the [changelog](CHANGELOG.md).
+A file converter for Windows. Current version: `v1.2.0`. Drop or select files, choose an output format, and convert. You can also convert a single file from the File Explorer context menu. See the [changelog](CHANGELOG.md).
 
 ## Download
 

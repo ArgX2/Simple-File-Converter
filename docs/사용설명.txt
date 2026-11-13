@@ -1,5 +1,5 @@
 Simple File Converter
-Windows 10/11 64비트용 · 버전 v1.1.0
+Windows 10/11 64비트용 · 버전 v1.2.0
 
 실행 방법
 Simple File Converter.exe를 실행하세요. Python이나 별도의 변환 프로그램 설치는 필요 없습니다.

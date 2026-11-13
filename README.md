@@ -2,7 +2,7 @@
 
 **한국어** | [English](README.en.md) | [日本語](README.ja.md) | [简体中文](README.zh-CN.md) | [Español](README.es.md)
 
-Windows용 파일 변환 프로그램입니다. 현재 버전은 `v1.1.0`입니다. 파일을 드래그하거나 선택하고, 원하는 형식으로 변환하세요. 탐색기 우클릭 메뉴에서도 단일 파일을 바로 변환할 수 있습니다. [변경 이력](CHANGELOG.md)
+Windows용 파일 변환 프로그램입니다. 현재 버전은 `v1.2.0`입니다. 파일을 드래그하거나 선택하고, 원하는 형식으로 변환하세요. 탐색기 우클릭 메뉴에서도 단일 파일을 바로 변환할 수 있습니다. [변경 이력](CHANGELOG.md)
 
 ## 다운로드
 
@@ -41,6 +41,7 @@ EXE를 다운로드한 뒤 실행하고 파일을 드래그하면 됩니다. 지
 - 소스 실행·빌드: Python 3.12, 64비트
 - PPT/PPTX → PDF 및 PDF → PPT: **PowerPoint 또는 LibreOffice 설치 필요**
 - DOCX → PDF: **Microsoft Word 또는 LibreOffice 설치 필요**
+- HWP/HWPX ↔ PDF 및 HWP ↔ HWPX: rhwp 0.9.0 사용. 소스 실행과 빌드 전 `powershell -File scripts/prepare_rhwp.ps1` 실행 필요.
 - PDF → DOCX: 내장 텍스트·페이지 이미지 추출을 사용하며 OCR은 지원하지 않습니다.
 - PDF → PPTX: Office 설치 불필요. 각 페이지를 **이미지 슬라이드**로 저장합니다.
 
@@ -51,11 +52,15 @@ EXE를 다운로드한 뒤 실행하고 파일을 드래그하면 됩니다. 지
 | MP4, AVI, MKV, MOV, WEBM, WMV, M4V, MPG, MPEG | MP4, AVI, MKV, MOV, WEBM, GIF, PNG, JPG 및 음성 추출 |
 | MP3, WAV, FLAC, AAC, M4A, OGG, OPUS, WMA | MP3, WAV, FLAC, M4A, OGG, AAC, OPUS |
 | PNG, JPG, JPEG, GIF, WEBP, BMP, TIF, TIFF, ICO | PNG, JPG, WEBP, BMP, TIFF, GIF, PDF |
-| PDF | PNG, JPG, WEBP, TIFF, PPTX, PPT, DOCX |
+| PDF | PNG, JPG, WEBP, TIFF, PPTX, PPT, DOCX, HWP, HWPX |
+| HWP | HWPX, PDF |
+| HWPX | HWP, PDF |
 | PPT, PPTX | PDF |
 | DOCX | PDF |
 
 실제 변환 가능 여부는 파일 내용과 설치된 프로그램에 따라 달라집니다. 움직이는 GIF의 MP4/WEBM 변환은 프로그램 창에서 선택할 수 있습니다.
+
+한글 문서 변환은 모두 불완전 변환으로 표시합니다. 글꼴, 배치, 그림 및 편집 구조가 달라질 수 있으며 PDF 가져오기는 원본 구조를 완전히 복원하지 않습니다. 암호로 보호된 문서는 지원하지 않습니다.
 
 완전한 보존이 어려운 항목은 프로그램에서 `XXX로 불완전 변환` 형식으로 표시합니다. 불완전 변환은 결과 품질을 보장하지 않으며, 일부 내용·서식·배치가 누락되거나 제대로 변환되지 않을 수 있습니다. 실제 변환 실패와 구분되는 품질 안내입니다.
 
@@ -154,7 +159,7 @@ Simple File Converter.spec  포터블 빌드 설정
 
 ## 예정 기능
 
-Word `DOCX`의 PDF 변환과 PDF ↔ DOCX를 지원합니다. `DOC`, 한글(`HWP`, `HWPX`), PDF ↔ HTML·PNG·Markdown, 이미지 묶음 ↔ 다중 페이지 PDF 등 추가 후보와 구현 조건은 [개선 로드맵](docs/ROADMAP.md)에 기록해 두었습니다.
+Word `DOCX`와 한글 `HWP`, `HWPX`의 PDF 변환을 지원합니다. 추가 후보와 구현 조건은 [개선 로드맵](docs/ROADMAP.md)에 기록해 두었습니다.
 
 원본의 편집 구조나 배치를 완전히 보장하기 어려운 변환에는 **`XXX로 불완전 변환`**처럼 표시합니다. 이 표기는 현재 16개 UI 언어로 함께 제공됩니다.
 
